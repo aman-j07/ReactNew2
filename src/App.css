@@ -1,38 +1,552 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hidden {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%;
+  background-color: #cf102d;
+  min-height: 605px;
+}
+#containerSignLog {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin: auto;
+  background-size: 100% 100%;
+  height: 606px;
+  background-image: url(https://media.istockphoto.com/photos/box-of-toys-on-the-floor-teddy-bear-in-boxvintage-tone-charitable-picture-id1017309510?k=20&m=1017309510&s=612x612&w=0&h=hlrEqEYcyrYjEqlkmJhugTepGVtzjkGohyPdnD5uK3o=);
+}
+#containerSignLog > h2 {
+  font-size: 45px;
+  font-family: "Dancing Script", cursive;
+  margin: 1% 0 0 0;
+  color: #cf102d;
+}
+#containerSignLog > h4 {
+  font-family: "Dancing Script", cursive;
+}
+#signLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2% auto;
+  background-color: #dfdfdfd1;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+  padding: 1% 5%;
+}
+.signLogHeading {
+  font-size: 22px;
+}
+#signLog > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#signLog button {
+  width: 183px;
+  background-color: #521212;
+  border: 1px solid #8d8888;
+  border-radius: 3px;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+#signLog input {
+  height: 25px;
+  border-radius: 3px;
+  border: 0.5px solid #8d8888;
+}
+input:focus {
+  outline: none;
+}
+#signUp {
+  height: 260px;
+  margin: 4% 0;
+}
+#signUpHidden {
+  visibility: hidden;
+  height: 0;
+}
+#logIn {
+  height: 220px;
+}
+#logInHidden {
+  visibility: hidden;
+  height: 0;
+}
+#signUp > div {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+}
+#logIn > div {
+  display: flex;
+  flex-direction: column;
+  height: 95px;
+  justify-content: space-between;
+}
+.paraError {
+  color: red;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 2px;
+  width: 178px;
+}
+.error {
+  color: orange;
+}
+.paraLink a {
+  color: #521212;
+  text-decoration: underline;
+  cursor: grab;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+i {
+  color: black;
+  font-size: 30px;
+  margin: 0 5px;
+}
+a {
+  cursor: grab;
+}
+#divNavbar {
+  width: 96%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  background-color: #cf102d;
+}
+#divNavbar * {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#divNavbar > div {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}
+#divLogo {
+  height: 100%;
+}
+#pLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 35px;
+}
+#divNavbar img {
+  height: 90%;
+}
+.menuIcon {
+  font-size: 22px;
+  margin: 0 2% 0 3%;
+  display: flex;
+  align-items: center;
+}
+#explaur,
+#explaur > * {
+  color: #6a1717;
+}
+.fa-solid {
+  font-size: 20px;
+}
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: inherit;
+}
+#aSearch {
+  background: transparent;
+  padding: 1px 6px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#search {
+  height: 100px;
+  width: 70%;
+  margin: 1% auto;
+  padding: 0px 0px 0px 15px;
+  display: flex;
+  border: 2px solid orange;
+  background-color: white;
+}
+#search img {
+  width: 25%;
+  height: 100%;
+}
+#offer {
+  width: 75%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+#offer p,
+#offer pre {
+  display: inline;
+}
+#paraOffer {
+  font-size: 2.59rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#searchOuter {
+  background-color: white;
+  padding: 10px 0;
+  height: 300px;
+  width: 300%;
+}
+#searchOuter{
+  position: relative;
+  left: 0;
+  animation: 15s slideImage infinite;
+}
+@keyframes slideImage{
+  0%{
+    left: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  10%{
+      left:0%
+  }
+  20%{
+    left: -100%;
+  }
+  30%{
+    left: -100%;
+  }
+  45%{
+    left: -200%;
+  }
+  60%{
+    left: -200%;
+  }
+  75%{
+    left: -100%;
+  }
+  90%{
+    left: -100%;
+  }
+  100%{
+      left: 0%;
+  }
+}  
+#searchOuter img{
+width: 1351px;
+height: 100%;
+}
+
+#third button{
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  height: 50%;
+  width: 3%;
+  font-size: 40px;
+}
+#divSearch {
+  height: 40%;
+  border-radius: 2px;
+  display: flex;
+  padding: 0 1%;
+  width: 40% !important;
+  background-color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#divSearch input {
+  font-size: 15px;
+  width: 90%;
+  border: none;
+  height: 90%;
+  color: black;
+}
+#searchIcon {
+  /* font-size: 30px; */
+}
+#sortFilter {
+  width: 25%;
+  padding: 2% 0;
+  min-width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#sortFilter > select {
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #cf102d;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+}
+#sortFilter > select:focus {
+  outline: 0;
+}
+#sortFilter > select option {
+  background-color: white;
+}
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 15px;
+  justify-content: space-around;
+  width: 75%;
+  margin: auto;
+  padding: 4% 0;
+}
+.item {
+  height: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: grab;
+  overflow: hidden;
+  border: 2px solid #1c9cd947;
+  background-color: white;
+  box-shadow: 6px 6px 0 0 #000;
+}
+.item p {
+  display: inline;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item > img {
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+}
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  width: 100%;
+  justify-content: space-around;
+}
+#paraitemName {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+  word-break: break-all;
+}
+#paraCuisine {
+  color: #5c5858;
+  font-size: 15px;
+  margin: 0 0 2px 0;
+}
+#paraPlace {
+  color: #5c5858;
+  font-size: 18px;
+  margin: 0 0 2px 0;
+}
+
+#detail {
+  display: flex;
+  padding: 2%;
+  margin: 2% 0;
+  background-color: #79aec742;
+  justify-content: center;
+}
+#detail > * {
+  margin: 0 1%;
+}
+#detail img {
+  width: 35%;
+  height: 90%;
+  border-radius: 5px;
+}
+#detail > div {
+  width: 35%;
+  height: 100%;
+}
+.detailName {
+  font-size: 50px;
+  margin: 2% 0;
+}
+#divAdd {
+  display: flex;
+  justify-content: space-between;
+  height: 8%;
+  border: 1px solid #c9c2c2;
+  align-items: center;
+  width: 25%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 2% 0;
+}
+#divAdd button {
+  width: 32%;
+  height: 100%;
+  background-color: #c52929d6;
+  color: white;
+}
+#divAdd p {
+  width: 36%;
+  height: 100%;
+  line-height: 180%;
+  text-align: center;
+}
+#addBtns {
+  display: flex;
+  align-items: center;
+}
+#btnAdd {
+  background-color: orange;
+  color: white;
+  width: 32%;
+  height: 10%;
+  border-radius: 20px;
+  margin: 0 9%;
+}
+#detailWeight {
+  color: #544f4f;
+  margin: 1% 0;
+}
+#detailPrice {
+  margin: 1% 0;
+}
+.detailDescription {
+  margin: 1% 0;
+  height: 25px;
+  overflow: hidden;
+}
+.detailDescriptionFull{
+  height: auto;
+}
+#paraDescription {
+  font-size: 13px;
+  color: #544f4f;
+  width: 77%;
+}
+#btnClose {
+  position: absolute;
+  right: 10px;
+  margin-top: 40px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+#divCart {
+  background-color: #c3e1ed;
+  width: 75%;
+  margin: auto;
+  border-radius: 3px;
+  padding: 2%;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+#divCart > h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Satisfy", cursive;
+  color: #1f45ffad;
+}
+#cartTable {
+  width: 70%;
+  margin: 1% 0;
+}
+#cartTable img {
+  height: 60px;
+  width: 90px;
+}
+#cartTable tr {
+  width: 100%;
+  margin: 1% 0;
+}
+#cartTable td {
+  width: 20%;
+  text-align: center;
+}
+#cartTable td > button {
+  height: 90%;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: transparent;
+}
+#paraSTotal {
+  text-align: right;
+  font-size: 20px;
+  font-family: "Satisfy", cursive;
+}
+#paraTaxes {
+  text-align: right;
+  font-size: 20px;
+  font-family: "Satisfy", cursive;
+}
+#paraGTotal {
+  text-align: right;
+  font-size: 25px;
+  font-family: "Satisfy", cursive;
+}
+#btnBack {
+  width: 10%;
+  margin: 1% 44%;
+  border-radius: 15px;
+  font-size: 13px;
+}
+@media screen and (max-width: 821px) {
+  /* #search{
+    height: 220px;
+  }
+  #divSearch input{
+    font-size: 22px;
+  } */
+  #divNavbar > *,
+  #explaur {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 722px) {
+  #search {
+    height: 180px;
+  }
+  #divSearch input {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #search {
+    height: 140px;
+  }
+  #divSearch input {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 466px) {
+  #search {
+    height: 60px;
+  }
+  #divSearch input {
+    font-size: 9px;
+  }
+  .fa-solid {
+    font-size: 10px;
   }
 }
