@@ -5,13 +5,13 @@ const Cart = (props) => {
     const[total,setTotal]=useState(props.subtotal+100)
     if(props.cart.length>0){
   return (<>
-    <Link to="/restaurants"><button id='btnBack'>Back to sweets</button></Link>
+    <Link to="/restaurants"><button id='btnBack'>Back to Toys</button></Link>
     <div id="divCart">
         <h2>Cart</h2>
         <table id="cartTable">
             <th></th><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th>
                 {props.cart.map((item,i)=>{
-                    return( <tr><td><img src={item.photograph}/></td><td>{item.name}</td><td>₹{item.price}</td><td>{item.quantity}</td><td>₹{item.subtotal}</td><td><button index={i} onClick={props.Remove}>Remove</button></td></tr>)
+                    return( <><tr><td><img src={item.photograph}/></td><td>{item.name}</td><td>₹{item.price}</td><td>{item.quantity}</td><td>₹{item.subtotal}</td><td><button index={i} onClick={props.Remove}>Remove</button></td></tr><hr id="differHr"/></>)
                 })}
         </table>
         <p id='paraSTotal'>Subtotal: ₹{props.subtotal}</p>

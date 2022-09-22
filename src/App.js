@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import Restaurants from "./components/Restaurants";
 import SignLog from "./components/SignLog";
 
@@ -107,7 +108,7 @@ function App() {
       photograph:
         "https://hamleysgumlet.gumlet.io/product/491635724/665/491635724-1.jpg",
       price: 1079,
-      category: 8,
+      category: 5,
       description:"When Thanos Wants To Take Over Total Control Of The Galaxy, He Sets Out On A Mission To Find The Infinity Stones And Store Them In His Impressive, Golden Infinity Gauntlet. Imagine The Incredible, Super-Powered Action Of The Avengers With Figures, Role Play Inspired By Avengers: Endgame! This Infinity Gauntlet Is Inspired By The Avengers: Endgame Movie, Part Of The Marvel Cinematic Universe That Includes Avengers: Infinity War. Avengers: Infinity War Features Characters Like Iron Man, Captain America, Spider-Man, Black Panther, And More! With Avengers: Endgame -Inspired Toys, Kids Can Imagine Battling Like Their Favourite Heroes And Playing Their Part In Saving The Galaxy! Kids Can Imagine Summoning The Power Of The Infinity Stones And Controlling The Fate Of The Galaxy With The Light-Up Electronic Gauntlet, Including Lights And Sounds! Push The Centre Button On The Fist To Light Up The Centre Stone And To Activate Mighty Sound Fx! The Infinity Gauntlet Electronic Fist Is Designed To Fit Most Kid Hand Sizes."
     },
     {
@@ -115,7 +116,7 @@ function App() {
       name:"Uboard Infinity Hover Board for Outdoor play Multicolor 14Y+",
       photograph:"https://hamleysgumlet.gumlet.io/product/492409219/665/492409219%20-%201.webp",
       price:34999,
-      category:12,
+      category:14,
       description:"Fun loving toys with outdoor activity | Keeps childern engaged for hours of creativity and fun. | Body Movement booster | It as LED wheels | Takes upto 100kgs | Max 10Km Range"
     },
     {
@@ -147,7 +148,7 @@ function App() {
       name:"ELC Twist and Turn House Activity Game for Kids 12M+, Multicolour",
       photograph:"https://hamleysgumlet.gumlet.io/product/492365284/665/492365284-1.jpg",
       price:1279,
-      category:0,
+      category:1,
       description:"Bursting with fun challenges for little hands to enjoy, the Twist and Turn Activity House from Early Learning Centre is perfect to keep little ones entertained | A multi-activity play area with gears, doors that open and close, a spiral ball run, shape sorting, and ball pounding | It encourages young toddlers to smash the ball into the chimney of the house with a variety of activities to keep little hands occupied and develop the fine motor skills, hand-to-eye coordination and problem-solving skills | They can reach inside to find the ball after seeing it swirl around the roof and crash into the building. Parents can teach kids how to use the keys to open the doors and urge them to try to post the shapes within the house because toddlers love to do so aka it is a perfect toy for kids."
     },
     {
@@ -155,7 +156,7 @@ function App() {
       name:"Hamleys Ping Ping Panda, 32Cm",
       photograph:"https://hamleysgumlet.gumlet.io/product/491948350/665/491948350-1.jpg",
       price:1869,
-      category:0,
+      category:1,
       description:"Ping ping adds an exotic touch to the animal kingdom and enjoys taking things easy. Ping ping doesnt take life too seriously and has a cheeky side to him. When hes not munching on bamboo or hiding in the hollow of his favourite tree, ping ping can often be found tickling the other animals and challenging the monkeys to climbing competitions. Naturally after a long day, ping ping likes nothing more than to cuddle up and take a nap somewhere cosy. Do you know anywhere he might like? Ping ping is 32cm tall, has a luxuriously soft fur coat and a friendly and adorable hand-stitched face."
     },
     {
@@ -163,7 +164,7 @@ function App() {
       name:"Lego 31100 Sports Car Blocks for Kids age 6Y+",
       photograph:"https://hamleysgumlet.gumlet.io/product/491636277/665/491636277-1.jpg",
       price:999,
-      category:5,
+      category:6,
       description:"Hop in this awesome red sports car and hit the road! Start the powerful engine of this cool red and black machine, put your foot on the gas pedal and go, go, go! For more fun, rebuild it into A cool hot rod to set A new speed record, turn it into an old-fashioned plane and head off to the air show, or free your imagination and build something new. Feel the need for speed with this cool 3in1 set!"
     },
     {
@@ -171,7 +172,7 @@ function App() {
       name:"Hamleys Wooden Labyrinth Board Game Multicolour 6Y+",
       photograph:"https://hamleysgumlet.gumlet.io/product/492364331/665/492364331-1.jpg",
       price:1169,
-      category:5,
+      category:6,
       description:"Labyrinth is the ancient game of skill, thrills and spills | The aim of the game is to tilt the play board to guide the ball to the end of the maze, without letting it fall into any of the holes | Challenge yourself to this classic game on a traditional style wooden playing board from Hamleys | This lovely game board comes with 2 steel balls."
     },
     {
@@ -179,7 +180,7 @@ function App() {
       name:"Smartivity Fantastic Optics Kaleidoscope: Stem, Learning, Educational and Construction Activity Toy Gift for Kids age 6Y+ (Multi-Color)",
       photograph:"https://hamleysgumlet.gumlet.io/product/491316325/665/491316325-2.jpg",
       price:584,
-      category:5,
+      category:6,
       description:"Relive the spectacle of your childhood with Smartivity Fantastic Optics Kaleidoscope stem, educational, learning, science, D.I.Y. toy kit. Introduce your child to an infinite sequence of patterns, a dazzling world of colours. First designed by Scotsman Dr. David Brewster in 1816, a kaleidoscope is not just another toy. It is a portal into the fascinating world of patterns and colours. Used as a source of inspiration by designers and artists, kaleidoscope inspires creativity and introduces your child to the wonders of light, colours and reflection. Give your child a peek into the magical new dimension where colours dance and wonders abound. Vibrant and colourful, Smartivity Fantastic Optics Kaleidoscope S.T.E.M. Learning D.I.Y. kit opens up a world of patterns and designs for your child. It contains all the elements necessary to build this spectacular device. Just fill the kaleidoscope drum with colourful trinkets included in the kit, and watch your child explore the wonders of light and colours."
     },
     {
@@ -187,7 +188,7 @@ function App() {
       name:"Hasbro Risk strategy Board Game for kids 10Y+, Multicolour",
       photograph:"https://hamleysgumlet.gumlet.io/product/491334374/665/491334374-1_3395.webp",
       price:2499,
-      category:9,
+      category:10,
       description:"Take over the world in this game of strategy conquest, now with updated figures and improved mission cards. In the Risk game, the goal is simple,players aim to conquer their enemies and territories by building an army, moving their troops in, and engaging in battle. Depending on the roll of the dice, a player will either defeat the enemy or be defeated. This exciting game is filled with betrayal, alliances, and surprise attacks. On the battlefield, anything goes! Defeat all of the enemy troops in a territory to conquer that territory and get one step closer to global conquest! The player who completes his or her secret mission first--and reveals the Secret Mission card to prove it--wins. Dice and five armies are included in war crates."
     },
     {
@@ -262,6 +263,7 @@ function App() {
         <Route path='/cart' element={<Cart cart={Cart1} Remove={Remove} subtotal={subtotal}/>}>
         </Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }

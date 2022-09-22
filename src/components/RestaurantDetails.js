@@ -41,7 +41,6 @@ const RestaurantDetails = (props) => {
         <img alt={props.detail.name} src={props.detail.photograph} />
         <div>
           <h2 className="detailName">{props.detail.name}</h2>
-          <p id="detailWeight">{props.detail.weight}</p>
           <p id="detailPrice">₹{props.detail.price}</p>
           <div className="detailDescription">
             <pre>

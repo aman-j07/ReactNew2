@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import RestaurantsList from "./RestaurantsList";
-import logo from './logo-removebg-preview (1).png'
-
-let matched = [];
 
 const Restaurants = (props) => {
   const restaurants=props.restaurants;
@@ -30,7 +27,7 @@ const Restaurants = (props) => {
         let max=e.target.options[e.target.selectedIndex].getAttribute('max')
         for (let i = 0; i < restaurants.length; i++) {
           if (
-            restaurants[i].category>min && restaurants[i].category<=max) {
+            restaurants[i].category>=min && restaurants[i].category<max) {
             Matched.push(restaurants[i]);
           }
         }
@@ -46,8 +43,8 @@ const Restaurants = (props) => {
     Matched.sort((a,b) => b.price - a.price);
     }
     setMatched([...Matched])
+    console.log(Matched)
   }
-
   return (
     <>
       <div id="divNavbar">
@@ -80,7 +77,7 @@ const Restaurants = (props) => {
       <img src="https://cdn.fcglcdn.com/brainbees/images/marketing/d/toys_fest/banner-fisherprice.jpg"/>
       <img id="lastImg" src="https://www.nepaloffers.com/public/offer/cd8571708784f9e1e7828586c2d989a7" />
       </div> 
-      <div id="sortFilter">
+      <div id="sortFilter" name="sfDiv">
         <select id="selFilter" onChange={Filter}>
           <option min="0" max="13">Filter By</option>
           <option min="0" max="2">Age 0-2 years</option>
