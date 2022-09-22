@@ -1,38 +1,701 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  text-decoration: none;
+  color: black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hidden {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%;
+  min-height: 605px;
+  position: relative;
+}
+#containerSignLog {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin: 5% auto 0;
+  background-size: 100% 100%;
+  height: 505px;   
+}
+#containerSignLog > h2 {
+  font-size: 45px;
+  font-family: "Dancing Script", cursive;
+  margin: 1% 0 0 0;
+  color: #cf102d;
+}
+#containerSignLog > h4 {
+  font-family: "Dancing Script", cursive;
+}
+#signLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2% auto;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+  background-color: #fff;
+  width: 348px;
+}
+.signLogHeading {
+  font-size: 22px;
+}
+#signLog > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#signLog button {
+  width: 312px;
+  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  border-radius: 3px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+#signLogLabels{
+  font-size: 14px;
+  font-weight: 700;
+  margin: 2px 0;
+}
+#signLog input {
+  height: 25px;
+  width: 312px;
+  border: 1px solid #a6a6a6;
+  border-top-color: #949494;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+  outline: 0;
+}
+input:focus {
+  outline: none;
+}
+#signUp {
+  height: 300px;
+  margin: 4% 0;
+}
+#signUpHidden {
+  visibility: hidden;
+  height: 0;
+  padding: 0 !important;
+}
+#logIn {
+  height: 220px;
+  padding: 4% 0;
+}
+#logInHidden {
+  visibility: hidden;
+  height: 0;
+}
+#signUp > div {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+}
+#logIn > div {
+  display: flex;
+  flex-direction: column;
+  height: 95px;
+  justify-content: space-between;
+}
+.paraError {
+  color: red;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 2px;
+  width: 178px;
+}
+.error {
+  color: orange;
+}
+.paraLink a {
+  color: #521212;
+  text-decoration: underline;
+  cursor: grab;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+i {
+  color: black;
+  font-size: 30px;
+  margin: 0 5px;
+}
+a {
+  cursor: grab;
+}
+#divNavbar {
+  width: 96%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  background-color: #131921;
+}
+#logoImg{
+  height: 70% !important;
+}
+#divNavbar * {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#divNavbar > div {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+}
+#divLogo {
+  height: 100%;
+}
+#pLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 35px;
+}
+#divNavbar img {
+  height: 90%;
+}
+#divLocation{
+  width: auto !important;
+}
+.navBarDivs{
+  display: flex;
+  flex-direction: column;
+}
+.navBarDivHeads{
+  font-size: 12px;
+  color: #ccc;
+}
+.navBarDivHeadsMini{
+  font-size: 14px;
+  font-weight: 600;
+}
+#divLocation i{
+  margin: 5% 3px 0 0 !important;
+  font-size: 18px !important;
+}
+#divNavBarMini{
+  background-color: #232f3e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navBarMiniLinks{
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+}
+#navBarMiniLinks>li{
+  list-style: none;
+  font-size: 14px;
+  color: white;
+}
+#divRegion{
+  width: 40px !important;
+  display: flex;
+  height: 40%;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+}
+#divAccountInfo{
+  width: auto !important;
+} 
+#divReturn{
+  width: auto !important;
+}
+.menuIcon {
+  font-size: 22px;
+  margin: 0 2% 0 3%;
+  display: flex;
+  align-items: center;
+}
+#explaur,
+#explaur > * {
+  color: #6a1717;
+}
+.fa-solid {
+  font-size: 20px;
+}
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  font-family: inherit;
+}
+#aSearch {
+  background: transparent;
+  padding: 1px 6px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#search {
+  height: 100px;
+  width: 70%;
+  margin: 1% auto;
+  padding: 0px 0px 0px 15px;
+  display: flex;
+  border: 2px solid orange;
+  background-color: white;
+}
+#search img {
+  width: 25%;
+  height: 100%;
+}
+#offer {
+  width: 75%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+#offer p,
+#offer pre {
+  display: inline;
+}
+#paraOffer {
+  font-size: 2.59rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#searchOuter {
+  height: 600px;
+  z-index: -1;
+  width: 300%;
+  position: absolute;
+  animation: 15s slideImage infinite;
+}
+@keyframes slideImage {
+  0% {
+    left: 0%;
   }
-  to {
-    transform: rotate(360deg);
+  10% {
+    left: 0%;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -100%;
+  }
+  45% {
+    left: -200%;
+  }
+  60% {
+    left: -200%;
+  }
+  75% {
+    left: -100%;
+  }
+  90% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+#searchOuter img {
+  width: 1351px;
+  height: 100%;
+}
+
+#third button {
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  height: 50%;
+  width: 3%;
+  font-size: 40px;
+}
+#divSearch {
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  width: 40% !important;
+  background-color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding-left: 1%;
+}
+#searchIconDiv{
+  background-color: #febd69;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divSearch input {
+  font-size: 15px;
+  width: 90%;
+  border: none;
+  height: 90%;
+  color: black;
+}
+#searchIcon {
+  color: #1e1e48;
+}
+#sortFilter {
+  width: 25%;
+  padding: 2% 0;
+  min-width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+#sortFilter > select {
+  width: 150px;
+  height: 35px;
+  font-size: 15px;
+  background-color: #cf102d;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+}
+#sortFilter > select:focus {
+  outline: 0;
+}
+#sortFilter > select option {
+  background-color: white;
+}
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 15px;
+  justify-content: space-around;
+  width: 95%;
+  margin: 230px auto 0;
+  padding: 4% 0;
+}
+.item {
+  height: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: grab;
+  overflow: hidden;
+  border: 2px solid #1c9cd947;
+  background-color: white;
+  box-shadow: 6px 6px 0 0 #000;
+}
+.item p {
+  display: inline;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item > img {
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+}
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  width: 100%;
+  justify-content: space-around;
+}
+#paraitemName {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+  word-break: break-all;
+}
+#paraCuisine {
+  color: #5c5858;
+  font-size: 15px;
+  margin: 0 0 2px 0;
+}
+#paraPlace {
+  color: #5c5858;
+  font-size: 18px;
+  margin: 0 0 2px 0;
+}
+
+#detail {
+  display: flex;
+  padding: 2%;
+  margin: 2% 0;
+  background-color: #79aec742;
+  justify-content: center;
+}
+#detail > * {
+  margin: 0 1%;
+}
+#detail img {
+  width: 35%;
+  height: 90%;
+  border-radius: 5px;
+}
+#detail > div {
+  width: 35%;
+  height: 100%;
+}
+.detailName {
+  font-size: 30px;
+  margin: 2% 0;
+}
+#divAdd {
+  display: flex;
+  justify-content: space-between;
+  height: 8%;
+  border: 1px solid #c9c2c2;
+  align-items: center;
+  width: 25%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 2% 0;
+}
+#divAdd button {
+  width: 32%;
+  height: 100%;
+  background-color: #c52929d6;
+  color: white;
+}
+#divAdd p {
+  width: 36%;
+  height: 100%;
+  line-height: 180%;
+  text-align: center;
+}
+#addBtns {
+  display: flex;
+  align-items: center;
+}
+#btnAdd {
+  background-color: orange;
+  color: white;
+  width: 32%;
+  height: 10%;
+  border-radius: 20px;
+  margin: 0 9%;
+}
+#detailWeight {
+  color: #544f4f;
+  margin: 1% 0;
+}
+#detailPrice {
+  margin: 1% 0;
+}
+.detailDescription {
+  margin: 1% 0;
+  height: 25px;
+  overflow: hidden;
+}
+.detailDescriptionFull {
+  height: auto;
+}
+#paraDescription {
+  font-size: 13px;
+  color: #ffe8e8;
+  width: 77%;
+}
+#btnClose {
+  position: absolute;
+  right: 10px;
+  margin-top: 40px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+#divCartParent{
+  display: flex;
+    justify-content: space-evenly;
+    background-color: #EAEDED!important;
+    padding: 2% 0;
+}
+#divCart {
+  background-color: white;
+  width: 980px;
+  border-radius: 3px;
+  padding: 2% 0;
+  min-height: 340px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+#divCart > h2 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 0 2%;
+}
+#cartTable {
+  width: 90%;
+  margin: 0 2%;
+  overflow: hidden;
+}
+#CartProductImg{
+  height: 100%;
+}
+
+#cartTable tr {
+  width: 100%;
+  margin: 1% 0;
+}
+#cartTable td {
+  min-width: 20%;
+  height: 200px;
+}
+#tdDetail{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 7%;
+  justify-content: space-around;
+}
+#tdPrice{
+  padding: 0 0 155px 0 !important;
+  font-weight: 600;
+}
+#cartTable td > button {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: transparent;
+  color: red;
+}
+#differHr {
+  width: 420%;
+}
+.paraItemName{
+  font-size: 25px;
+}
+#paraSTotal{
+  display: flex;
+  font-size: 20px;
+}
+#cartBill{
+  background-color: white;
+  width: 307px;
+  border-radius: 3px;
+  height:250px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+#btnBack {
+      margin: 1% 45%;
+      background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+      border: 1px solid;
+      border-color: #a88734 #9c7e31 #846a29;
+      color: #111;
+      border-radius: 4px;
+      height: 30px;
+      font-size: 15px;
+      font-weight: 600;
+}
+#btnBuy{
+  background: #FFD814;
+    border-color: #FCD200;
+    font-size:14px;
+    font-weight: 0;
+    border-radius: 8px;
+    width: 90%;
+}
+#divEMI{
+  height: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  border: 1px solid #bbaaaa;
+}
+#divEMIFull{
+  height: auto !important;
+}
+#divEMI>div{
+  display: flex;
+  align-items: center;
+}
+#divEMI h6{
+  font-size: 16px;
+}
+#footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcf3ec;
+}
+#footer ul li {
+  list-style: none;
+  font-size: 10px;
+}
+#footerLinks {
+  display: flex;
+  width: 65%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px !important;
+}
+@media screen and (max-width: 821px) {
+  /* #search{
+    height: 220px;
+  }
+  #divSearch input{
+    font-size: 22px;
+  } */
+  #divNavbar > *,
+  #explaur {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 722px) {
+  #search {
+    height: 180px;
+  }
+  #divSearch input {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #search {
+    height: 140px;
+  }
+  #divSearch input {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 466px) {
+  #search {
+    height: 60px;
+  }
+  #divSearch input {
+    font-size: 9px;
+  }
+  .fa-solid {
+    font-size: 10px;
   }
 }
