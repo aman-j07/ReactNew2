@@ -3,11 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import Payment from "./components/Payment";
 import Restaurants from "./components/Restaurants";
 import SignLog from "./components/SignLog";
 
 
-const cart=[];
+let cart=[];
 function App() {
   const [Cart1,setCart]=useState(cart)
   const [subtotal,setSubtotal]=useState(0)
@@ -215,6 +216,14 @@ function App() {
       category:5,
       description:"Created by an enthusiastic team of robotics engineers, AI innovators, psychologists, and educators, Miko 3 is an AI-powered smart robot that uses playful, conversational learning to educate, engage and entertain kids aged 5-12 years. Housing a wide range of academic opportunities and an integrated learning platform that offers access to live classes from educators worldwide, Miko is a healthy gateway to what technology has to offer. Miko 3 converses with the child through self-initiated conversations. It is enabled with a proprietary emotional intelligence engine, Face Recognition, Directional Hearing, enabling it to see, hear and sense the child's moods and grows with the child with every interaction. This robot for kids includes a vast range of academic opportunities, unlimited games, an entire pool of premium content like coding apps, foreign languages, and much more, accessible through a wide-angled, high-resolution expensive touch screen. With a shell of ABS Polymer, Miko is tougher than it looks. Thoughtfully engineered to be impact-resistant, non-toxic, and built to last. Expand your kid's world with Miko."
     },
+    {
+      id:25,
+      name:"Sirius Toys Hover Blast 3 in 1 Air, Land and Sea Drone Remote Control Toys for Kids age 8Y+",
+      photograph:"https://hamleysgumlet.gumlet.io/product/491602358/665/491602358.jpg",
+      price:5499,
+      category:8,
+      description:"This intelligent drone takes you across air, land and sea for the ultimate ride. Its 6 axis gyro stability and speed control makes it perfect for beginners. Pro fly lets you soar through the sky whilst hydro blast lets you hover across water, and hover drive for a flight along the ground. Show off your skills and perform 3D tricks and flips or let auto direction take you for a smooth, effortless flight. Auto return means your drone will always come back to you for greater peace of mind, wherever you go. After all the fun, simply recharge via USB for the next journey!"
+    },
   ];
 
   const AddtoCart=(e,quantity)=>{
@@ -255,14 +264,21 @@ function App() {
     setSubtotal(temp)
    }
 
+   const successfulPayment=()=>{
+    cart=[];
+    setCart([...cart])
+    setSubtotal("")
+   }
+
   return (
     <div className="container">
       <Routes>
         <Route path='/' element={<SignLog/>}/>
         <Route path='/restaurants' element={<Restaurants restaurants={restaurants} AddtoCart={AddtoCart}/>}/>
-        <Route path='/cart' element={<Cart cart={Cart1} Remove={Remove} subtotal={subtotal}/>}>
-        </Route>
+        <Route path='/cart' element={<Cart cart={Cart1} Remove={Remove} subtotal={subtotal}/>}/>
+        <Route path='/payment' element={<Payment subtotal={subtotal} successfulPayment={successfulPayment}/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }

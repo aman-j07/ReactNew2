@@ -34,7 +34,7 @@ const clickHandlerClose=()=>{
   return (<>
     <div id={id}>
       <div id="list">
-        {props.matched.map((item)=>{ return <a href='#detail' key={item.id}><div id={item.id} className="item" onClick={clickHandler}><img alt="null" src={item.photograph}/><div className="itemDetails"><p id="paraitemName">{item.name.slice(0,35)}</p><p id='paraPlace'>₹{item.price}</p></div></div></a>})}
+        {props.matched.map((item)=>{ return <a id='aItem' href='#detail' key={item.id}><div id={item.id} className="item" onClick={clickHandler}><img alt="null" src={item.photograph}/><div className="itemDetails"><p id="paraitemName">{item.name.slice(0,35)}</p><p id='paraPlace'>₹{item.price}</p></div></div></a>})}
       </div>
       <div>
       </div> 
@@ -46,7 +46,7 @@ const clickHandlerClose=()=>{
     return (
       <div id='restaurantsList'>
         <div id="list">
-        {props.matched.map((item)=>{ return <a href='#detail' key={item.id}><div id={item.id} className="item" onClick={clickHandler}><img alt="null" src={item.photograph}/><div className="itemDetails"><p id="paraitemName">{item.name.slice(0,35)}</p><p id='paraPlace'>₹{item.price}</p></div></div></a>})}
+        {props.matched.map((item)=>{ return <a id='aItem' href='#detail' key={item.id}><div id={item.id} className="item" onClick={clickHandler}><img alt="null" src={item.photograph}/><div className="itemDetails"><p id="paraitemName">{item.name.slice(0,35)}</p><p id='paraPlace'>₹{item.price}</p></div></div></a>})}
         </div>
       </div>
     )

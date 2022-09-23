@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom'
 const back="<<"
 const Cart = (props) => {
     const[total,setTotal]=useState(props.subtotal+100)
+
+    const expandEMI=()=>{
+      if(document.getElementById("expandEMI").innerHTML==="+"){
+      document.querySelector("div[name=EMIContent]").setAttribute("id","divEMIFull")
+      document.getElementById("expandEMI").innerHTML="-";
+      }
+      else{
+        document.querySelector("div[name=EMIContent]").removeAttribute("id")
+      document.getElementById("expandEMI").innerHTML="+";
+      }
+    }
+
     if(props.cart.length>0){
       let length="("+props.cart.length+" items)";
   return (<>
@@ -25,9 +37,9 @@ const Cart = (props) => {
     <p id='paraSTotal'>Subtotal {length}: <p style={{"fontWeight":"600"}}>₹{props.subtotal}</p></p>
         {/* <p id='paraTaxes'>Taxes: ₹100</p>
         <p id="paraGTotal">Grand Total:₹{total}</p> */}
-        <button id="btnBuy">Proceed To Buy</button>
-        <div id="divEMI">
-          <div><h6>EMI Available</h6><pre>                +</pre></div>
+        <Link id="btnBuyLink" to="/payment"><button id="btnBuy">Proceed To Buy</button></Link>
+        <div name="EMIContent" className="divEMI">
+          <div><h6>EMI Available</h6><pre onClick={expandEMI} id="expandEMI">+</pre></div>
           <p>Your order qualifies for EMI with valid credit cards (not available on purchase of Gold, Jewelry, Gift cards and Amazon pay balance top up). Learn more</p>
         </div>
     </div>

@@ -44,7 +44,7 @@ const RestaurantDetails = (props) => {
           <p id="detailPrice">₹{props.detail.price}</p>
           <div className="detailDescription">
             <pre>
-              Desciption <a onClick={dropDescription}>+</a>{" "}
+              Desciption        <a onClick={dropDescription}>+</a>{" "}
             </pre>
             <p id="paraDescription">{props.detail.description}</p>
           </div>

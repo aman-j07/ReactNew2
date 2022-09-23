@@ -7,6 +7,8 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  background-color: #e5e3e3;
+  z-index: 1;
 }
 #hidden {
   height: 0;
@@ -17,15 +19,18 @@ body {
   width: 100%;
   min-height: 605px;
   position: relative;
+  /* background-color: #e5e3e3; */
 }
+
 #containerSignLog {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 5% auto 0;
+  padding: 2% 0 0;
   background-size: 100% 100%;
-  height: 505px;   
+  background-color: white;
+  height: 505px;
 }
 #containerSignLog > h2 {
   font-size: 45px;
@@ -57,7 +62,7 @@ body {
 }
 #signLog button {
   width: 312px;
-  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
@@ -66,7 +71,7 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
-#signLogLabels{
+#signLogLabels {
   font-size: 14px;
   font-weight: 700;
   margin: 2px 0;
@@ -150,7 +155,7 @@ a {
   padding: 0 2%;
   background-color: #131921;
 }
-#logoImg{
+#logoImg {
   height: 70% !important;
 }
 #divNavbar * {
@@ -171,42 +176,42 @@ a {
 #divNavbar img {
   height: 90%;
 }
-#divLocation{
+#divLocation {
   width: auto !important;
 }
-.navBarDivs{
+.navBarDivs {
   display: flex;
   flex-direction: column;
 }
-.navBarDivHeads{
+.navBarDivHeads {
   font-size: 12px;
   color: #ccc;
 }
-.navBarDivHeadsMini{
+.navBarDivHeadsMini {
   font-size: 14px;
   font-weight: 600;
 }
-#divLocation i{
+#divLocation i {
   margin: 5% 3px 0 0 !important;
   font-size: 18px !important;
 }
-#divNavBarMini{
+#divNavBarMini {
   background-color: #232f3e;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#navBarMiniLinks{
+#navBarMiniLinks {
   display: flex;
   width: 60%;
   justify-content: space-evenly;
 }
-#navBarMiniLinks>li{
+#navBarMiniLinks > li {
   list-style: none;
   font-size: 14px;
   color: white;
 }
-#divRegion{
+#divRegion {
   width: 40px !important;
   display: flex;
   height: 40%;
@@ -214,10 +219,10 @@ a {
   flex-direction: column;
   font-size: 12px;
 }
-#divAccountInfo{
+#divAccountInfo {
   width: auto !important;
-} 
-#divReturn{
+}
+#divReturn {
   width: auto !important;
 }
 .menuIcon {
@@ -277,7 +282,7 @@ button {
 
 #searchOuter {
   height: 600px;
-  z-index: -1;
+  /* z-index: -1; */
   width: 300%;
   position: absolute;
   animation: 15s slideImage infinite;
@@ -335,7 +340,7 @@ button {
   overflow: hidden;
   padding-left: 1%;
 }
-#searchIconDiv{
+#searchIconDiv {
   background-color: #febd69;
   height: 100%;
   width: 10%;
@@ -385,26 +390,26 @@ button {
   margin: 230px auto 0;
   padding: 4% 0;
 }
+#aItem {
+  z-index: 2;
+}
 .item {
   height: 300px;
   padding: 10px;
-  border-radius: 4px;
   cursor: grab;
   overflow: hidden;
-  border: 2px solid #1c9cd947;
   background-color: white;
-  box-shadow: 6px 6px 0 0 #000;
+  /* background-color: #e5e3e3; */
 }
 .item p {
   display: inline;
 }
 .item:hover {
-  transform: scale(1.05);
+  /* background-color: #ccc */
 }
 .item > img {
   width: 100%;
   height: 70%;
-  border-radius: 5px;
 }
 .itemDetails {
   display: flex;
@@ -436,6 +441,9 @@ button {
   margin: 2% 0;
   background-color: #79aec742;
   justify-content: center;
+}
+#detail pre {
+  font-size: 18px;
 }
 #detail > * {
   margin: 0 1%;
@@ -497,7 +505,7 @@ button {
 }
 .detailDescription {
   margin: 1% 0;
-  height: 25px;
+  height: 22px;
   overflow: hidden;
 }
 .detailDescriptionFull {
@@ -505,7 +513,7 @@ button {
 }
 #paraDescription {
   font-size: 13px;
-  color: #ffe8e8;
+  color: #4a4646;
   width: 77%;
 }
 #btnClose {
@@ -519,11 +527,11 @@ button {
   background-color: black;
   color: white;
 }
-#divCartParent{
+#divCartParent {
   display: flex;
-    justify-content: space-evenly;
-    background-color: #EAEDED!important;
-    padding: 2% 0;
+  justify-content: space-evenly;
+  background-color: #eaeded !important;
+  padding: 2% 0;
 }
 #divCart {
   background-color: white;
@@ -544,7 +552,7 @@ button {
   margin: 0 2%;
   overflow: hidden;
 }
-#CartProductImg{
+#CartProductImg {
   height: 100%;
 }
 
@@ -556,14 +564,14 @@ button {
   min-width: 20%;
   height: 200px;
 }
-#tdDetail{
+#tdDetail {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0 7%;
   justify-content: space-around;
 }
-#tdPrice{
+#tdPrice {
   padding: 0 0 155px 0 !important;
   font-weight: 600;
 }
@@ -576,18 +584,18 @@ button {
 #differHr {
   width: 420%;
 }
-.paraItemName{
+.paraItemName {
   font-size: 25px;
 }
-#paraSTotal{
+#paraSTotal {
   display: flex;
   font-size: 20px;
 }
-#cartBill{
+#cartBill {
   background-color: white;
   width: 307px;
   border-radius: 3px;
-  height:250px;
+  height: 250px;
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
   display: flex;
   justify-content: space-evenly;
@@ -595,26 +603,30 @@ button {
   align-items: center;
 }
 #btnBack {
-      margin: 1% 45%;
-      background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-      border: 1px solid;
-      border-color: #a88734 #9c7e31 #846a29;
-      color: #111;
-      border-radius: 4px;
-      height: 30px;
-      font-size: 15px;
-      font-weight: 600;
+  margin: 1% 45%;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  border-radius: 4px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
 }
-#btnBuy{
-  background: #FFD814;
-    border-color: #FCD200;
-    font-size:14px;
-    font-weight: 0;
-    border-radius: 8px;
-    width: 90%;
+#btnBuyLink {
+  width: 90%;
 }
-#divEMI{
+#btnBuy {
+  background: #ffd814;
+  border-color: #fcd200;
+  font-size: 14px;
+  font-weight: 0;
+  border-radius: 8px;
+  width: 100%;
+}
+.divEMI {
   height: 20px;
+  padding: 2%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -622,26 +634,52 @@ button {
   align-items: center;
   border: 1px solid #bbaaaa;
 }
-#divEMIFull{
+#divEMIFull {
   height: auto !important;
 }
-#divEMI>div{
+.divEMI > div {
   display: flex;
   align-items: center;
+  margin-bottom: 5%;
+  width: 100%;
+  justify-content: space-between;
 }
-#divEMI h6{
+.divEMI h6 {
   font-size: 16px;
 }
+.divEMI p {
+  font-size: 12px;
+}
+#expandEMI {
+  cursor: grab;
+  font-weight: 600;
+}
 #footer {
-  height: 100px;
+  height: 120px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background-color: #fcf3ec;
+  background-color: #131921;
+  justify-content: space-evenly;
+  padding: 2% 0;
+}
+#footerLogoDiv {
+  display: flex;
+  height: 40px;
+  width: 200px;
+  padding: 2% 0;
+  justify-content: space-between;
+}
+#footerLogoDiv select {
+  background-color: transparent;
+  color: white;
+  height: 90%;
+  border-radius: 3px;
 }
 #footer ul li {
   list-style: none;
   font-size: 10px;
+  color: white;
 }
 #footerLinks {
   display: flex;
@@ -658,6 +696,60 @@ button {
 #footerLogo {
   font-family: "Satisfy", cursive;
   font-size: 30px !important;
+}
+#paymentHead {
+  border-color: #ddd !important;
+  border-style: solid !important;
+  border-width: 0 0 1px 0 !important;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/G/31/common/sprites/tspc-header-bkg.png);
+  height: 60px;
+  background-position-y: -13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#cancelPayment {
+  background-color: transparent;
+  border-radius: 3px;
+  color: #837b7b;
+}
+#paymentBody {
+  margin: 1% auto;
+  width: 40%;
+  padding: 3% 5% 1%;
+  height: 300px;
+  border-radius: 3px;
+  font-size: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+#formPayment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+#formPayment > div {
+  display: flex;
+  justify-content: space-between;
+}
+#btnConfirmOrder {
+  width: 312px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  border-radius: 3px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5% 20%;
+}
+.successfull {
+  color: green;
+  text-align: center;
+  font-size: 30px;
 }
 @media screen and (max-width: 821px) {
   /* #search{

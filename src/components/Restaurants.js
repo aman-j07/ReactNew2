@@ -87,6 +87,22 @@ const Restaurants = (props) => {
       <img src="https://m.media-amazon.com/images/I/71UHB2VnFAL._SX3000_.jpg"/>
       <img id="lastImg" src="https://m.media-amazon.com/images/I/71xtcY66oOL._SX3000_.jpg" />
       </div> 
+      {/* <div id="sortFilter" name="sfDiv">
+        <select id="selFilter" onChange={Filter}>
+          <option min="0" max="13">Filter By</option>
+          <option min="0" max="2">Age 0-2 years</option>
+          <option min="2" max="5">Age 2-5 years</option>
+          <option min="5" max="7">Age 5-7 years</option>
+          <option min="7" max="9">Age 7-9 years</option>
+          <option min="9" max="12">Age 9-12 years</option>
+          <option min="12" max="13">Age 12+ years</option>
+        </select>
+        <select id="selSort" onChange={Sort}>
+          <option>Sort By</option>
+          <option>Price: High to Low</option>
+          <option>Price: Low to High</option>
+        </select>
+      </div> */}
       <RestaurantsList matched={Matched} AddtoCart={props.AddtoCart}/>
     </>
   );
