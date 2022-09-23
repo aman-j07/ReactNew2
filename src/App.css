@@ -3,17 +3,16 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 .App{
-  border: 3px solid #4eb1c1;
+  background-color: #79c8d5;
   margin: 2px;
 }
 #navBar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2% 3%;
+  padding: 3% 6%;
 }
 #navBar>img{
-  padding-top: 20px;
 }
 #navLinks{
   width: 60%;
@@ -22,41 +21,43 @@ body{
   align-items: center;
 }
 #navLinks>a{
-  color: #576e87;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 #aLogIn{
-  background-color: #46c3d7;
+  background-color: #e96c01;
   color: white !important;
   height: 30px;
   width: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  padding: 2px 2%;
 }
 #body{
   display: flex;
-  padding: 0 0 45px 0;
+  padding: 6% 0 45px 0;
+  justify-content: space-between;
 }
 #left{
-  width: 23%;
-  padding: 2% 10%;
   height: 280px;
+  width: 30%;
+  padding: 0 0 0 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
 }
 #left p{
-  font-size: 16px;
-  margin: 10% 0;
-  color: #576e87;
+  font-size: 26px;
+  color: white;
 }
 #left h2{
   margin: 0;
 }
 #online{
-  font-size: 60px;
-  color:#46c3d7;
+  font-size: 50px;
+  color:white;
 }
 #education{
   font-size: 45px;
@@ -73,7 +74,55 @@ body{
   padding: 0 10%;
 }
 #right{
-  width: 60%;
+  width: 28%;
+  min-height: 370px;
+  padding: 10px 15% 0 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+#right>div{
+  display: flex;
+  justify-content: space-between;
+}
+#right input{
+  height: 40px;
+  border: 0;
+  min-width: 175px;
+}
+#right select{
+  min-width: 181px;
+  border: 0;
+  min-height: 42px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1px;
+}
+#right select:focus{
+  outline: 0;
+}
+#inpLast{
+  height: 80px !important;
+}
+#inpSecLast{
+
+}
+#btnStarted{
+  background-color: #e96c01;
+  color: white !important;
+  height: 40px;
+  width: 65%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 2px 2%;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+}
+#imgDivs{
+  display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 50px;
 }
