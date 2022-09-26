@@ -6,7 +6,9 @@ import Task3 from "./components/Task3";
 import A from "./components/A";
 import CurrencyConvertorLevel1 from "./components/CurrencyConvertorLevel1";
 import Parent from "./components/Parent";
-import Task7 from "./components/Task7";
+import Task7usingCallback from "./components/Task7usingCallback";
+import Task7usingMemo from "./components/Task7usingMemo";
+import Task8 from "./components/Task8";
 
 export const UserContext=React.createContext();
 export const CurrencyContext=React.createContext();
@@ -35,7 +37,11 @@ function App() {
       <h2>Task 6</h2>
       <Parent/>
       <hr/>
-      <Task7/>
+      <Task7usingCallback/>
+      <hr/>
+      <Task7usingMemo/>
+      <hr/>
+      <Task8/>
     </div>
   );
 }

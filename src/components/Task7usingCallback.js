@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 
 let dark = {
   backgroundColor: "black",
@@ -8,31 +8,28 @@ let light = {
   backgroundColor: "white",
   color: "black",
 };
-const Task7 = () => {
+let bool=false;
+const Task7usingCallback = () => {
   let [count, setCount] = useState(0);
-  let [bool, setBool] = useState(true);
+  let [theme,setTheme]=useState(light);
 
   const changeHandler = (e) => {
     setCount(e.target.value);
   };
 
-  const toggleTheme =() => {
+  const toggleTheme =useCallback(() => {
     console.log("boolToggle=", bool);
     if (bool === true) {
-      setBool(false);
+      setTheme(light)
     } else {
-      setBool(true);
+        setTheme(dark)
     }
-  }
-
-  const checkBool = useMemo(() => {
-    console.log("boolCheck=", bool);
-    return bool;
-  });
+    bool=!bool;
+  },[theme])
 
   return (
-    <div className="lpo" style={checkBool ? light : dark}>
-      <h2>Task 7</h2>
+    <div className="lpo" style={theme}>
+      <h2>Task 7 using Callback</h2>
       <input value={count} onChange={changeHandler} type="number" />
       <button onClick={toggleTheme}>Toggle Theme</button>
       <p>{count}</p>
@@ -42,4 +39,4 @@ const Task7 = () => {
   );
 };
 
-export default Task7;
+export default Task7usingCallback;
