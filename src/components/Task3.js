@@ -13,6 +13,7 @@ const Task3 = () => {
         intervalCountdown=setInterval(startCountDown,1000)
       }
     const startCountDown=()=>{
+
          if(time.second>=1){
             time.second--;
         }
@@ -32,12 +33,14 @@ const Task3 = () => {
                 }
             }
         }
-        setTime(time)
+        setTime({...time})
       }
 
   return (
     <div>
-
+        <h2>Task 3</h2>
+         <p>{time.hour}:{time.minute}:{time.second}</p>
+        <button onClick={setCountdown}>Start</button>
     </div>
   )
 }
