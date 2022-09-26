@@ -16,14 +16,14 @@ const Task7 = () => {
     setCount(e.target.value);
   };
 
-  const toggleTheme = useCallback(() => {
+  const toggleTheme =() => {
     console.log("boolToggle=", bool);
     if (bool === true) {
       setBool(false);
     } else {
       setBool(true);
     }
-  }, [bool]);
+  }
 
   const checkBool = useMemo(() => {
     console.log("boolCheck=", bool);
