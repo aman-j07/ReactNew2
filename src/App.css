@@ -1,7 +1,6 @@
 .items{
   margin: 10px auto !important;
   max-width: 55% !important;
-  
 }
 
 .item{
@@ -35,6 +34,7 @@
   height: 30px;
   width: 125px;
   font-weight: 600;
+  z-index: 0 !important;
 }
 .vegIconPara{
   display: flex;

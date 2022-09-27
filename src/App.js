@@ -1,6 +1,18 @@
 import React from "react";
 import "./App.css";
-import { Button, AppBar, Box, Toolbar, Typography, IconButton, BottomNavigation, Grid, Paper, Card, CardMedia, CardContent,
+import {
+  Button,
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  IconButton,
+  BottomNavigation,
+  Grid,
+  Paper,
+  Card,
+  CardMedia,
+  CardContent,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -9,7 +21,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { Container } from "@mui/system";
-import veg from './components/icons8-vegetarian-food-symbol-48.png'
+import veg from "./components/icons8-vegetarian-food-symbol-48.png";
+import nonveg from "./components/icons8-non-vegetarian-food-symbol-48.png";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -28,12 +41,54 @@ let pink = {
 let ele;
 const App = () => {
   const [value, setValue] = React.useState(0);
-  let arr=[1,2,3,4,5,6,7]
-
+  let arr = [
+    {
+      name: "Plain Dosa",
+      category: veg,
+      price: 20,
+      img: "https://pipingpotcurry.com/wp-content/uploads/2020/11/Dosa-recipe-plain-sada-dosa-Piping-Pot-Curry.jpg",
+    },
+    {
+      name: "Poori",
+      category: veg,
+      price: 30,
+      img: "https://www.sharmispassions.com/wp-content/uploads/2011/11/8387009512_b7bf430276_o-450x500.jpg",
+    },
+    {
+      name: "Masala Dosa",
+      category: veg,
+      price: 20,
+      img: "https://imagevars.gulfnews.com/2022/04/04/classic-masala-dosa-recipe_17ff4cfe004_medium.jpg",
+    },
+    {
+      name: "Mangalore Bajji",
+      category: veg,
+      price: 30,
+      img: "https://2.bp.blogspot.com/-h_PNCFO7qtE/VVx0S9lsrlI/AAAAAAAAUc0/5XlrMRs5c1I/s1600/GoLi%2BBaje%2B%25285%2529%2B-1.jpg",
+    },
+    {
+      name: "Andhra Veg Meal",
+      category: veg,
+      price: 300,
+      img: "https://imgmedia.lbb.in/media/2019/10/5da56d5be96484b6185e43b4_1571122523906.jpg",
+    },
+    {
+      name: "Andhra Non-Veg Meal",
+      category: nonveg,
+      price: 350,
+      img: "https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/evdc8mntinevu3iyifi4",
+    },
+    {
+      name: "Andhra Egg Meal",
+      category: nonveg,
+      price: 250,
+      img: "https://img-global.cpcdn.com/recipes/15be816f014bee2c/680x482cq70/guddu-ulli-karam-egg-curry-andhra-style-recipe-main-photo.jpg",
+    },
+  ];
   return (
     <div className="App">
-      <Box style={{ position: "sticky", top: "0", width: "100%" }}>
-        <AppBar position="static" elevation={0} >
+      <Box style={{ position: "sticky", top: "0", width: "100%",zIndex:"2" }}>
+        <AppBar position="static" elevation={0}>
           <Toolbar
             style={{
               backgroundColor: "#f3f3f3",
@@ -59,20 +114,25 @@ const App = () => {
         </AppBar>
       </Box>
 
-      <Grid container gap={2}  sx={{maxWidth:1000}} xs={6} className="items">
-          {arr.map((item)=>{
-            return(
-              <Grid className="item" xs={5.5}>
-            <CardContent className="itemContent">
-              <Typography>Plain dosa</Typography>
-              <Typography className="vegIconPara smallPara"><img className="vegIcon" src={veg}/>veg</Typography>
-              <Typography className="smallPara">₹30.00</Typography>
-              <Button className="btnAdd">Add to Cart</Button>
-            </CardContent>
-            <CardMedia className="itemImg" image="https://pipingpotcurry.com/wp-content/uploads/2020/11/Dosa-recipe-plain-sada-dosa-Piping-Pot-Curry.jpg"></CardMedia>
-          </Grid>
-            )
-          })}
+      <Grid container gap={2} sx={{ maxWidth: 1000 }} xs={6} className="items">
+        {arr.map((item) => {
+          return (
+            <Grid className="item" xs={5.5}>
+              <CardContent className="itemContent">
+                <Typography>{item.name}</Typography>
+                <Typography className="vegIconPara smallPara">
+                  <img className="vegIcon" src={item.category} />
+                  veg
+                </Typography>
+                <Typography className="smallPara">
+                  ₹{item.price}.00
+                </Typography>
+                <Button className="btnAdd">Add to Cart</Button>
+              </CardContent>
+              <CardMedia className="itemImg" image={item.img}></CardMedia>
+            </Grid>
+          );
+        })}
       </Grid>
 
       <Box
