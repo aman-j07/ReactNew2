@@ -1,41 +1,50 @@
-.App{
-  height: 605px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 .items{
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  padding: 2px 25% 0px 20%;
-  justify-content: space-evenly;
+  margin: 10px auto !important;
+  max-width: 55% !important;
+  
 }
-.itemRow{
-  display: flex !important;
-  height: 27%;
-  justify-content: space-between;
 
-}
 .item{
-  border: 1px solid black;
-  border-radius: 2px;
-  height: 100%;
-  width: 48%;
+  border-radius: 7px;
+  border-top: 1px solid #00000042;
+  border-right: 1px solid #00000042;
+  height: 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px;
+  box-shadow: -3px 3px #00000042;
+  overflow: hidden;
+  padding: 0 0 0 1%;
 }
 .itemImg{
   height: 100%;
   width: 40%;
+}
+.itemContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+  padding: 2px !important;
 }
 .btnAdd{
   border: 1px solid #fbff00 !important;
   color: #fbff00 !important;
   font-weight: 600 !important;
   text-transform: capitalize !important;
+  height: 30px;
+  width: 125px;
+  font-weight: 600;
+}
+.vegIconPara{
+  display: flex;
+}
+.vegIcon{
+  height: 20px;
+  width: 20px;
+}
+.smallPara{
+  font-size: 14px !important;
 }
 .footer{
 

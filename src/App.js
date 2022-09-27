@@ -1,18 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  Button,
-  AppBar,
-  Box,
-  Toolbar,
-  Typography,
-  IconButton,
-  BottomNavigation,
-  Grid,
-  Paper,
-  Card,
-  CardMedia,
-  CardContent,
+import { Button, AppBar, Box, Toolbar, Typography, IconButton, BottomNavigation, Grid, Paper, Card, CardMedia, CardContent,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
@@ -21,6 +9,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { Container } from "@mui/system";
+import veg from './components/icons8-vegetarian-food-symbol-48.png'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -36,13 +25,15 @@ let pink = {
   fontSize: "10px",
   textTransform: "capitalize",
 };
+let ele;
 const App = () => {
   const [value, setValue] = React.useState(0);
+  let arr=[1,2,3,4,5,6,7]
 
   return (
     <div className="App">
-      <Box>
-        <AppBar position="static" elevation={0}>
+      <Box style={{ position: "sticky", top: "0", width: "100%" }}>
+        <AppBar position="static" elevation={0} >
           <Toolbar
             style={{
               backgroundColor: "#f3f3f3",
@@ -68,57 +59,25 @@ const App = () => {
         </AppBar>
       </Box>
 
-      <Box className="items">
-        <Container className="itemRow">
-          <Grid className="item">
-            <CardContent>
+      <Grid container gap={2}  sx={{maxWidth:1000}} xs={6} className="items">
+          {arr.map((item)=>{
+            return(
+              <Grid className="item" xs={5.5}>
+            <CardContent className="itemContent">
               <Typography>Plain dosa</Typography>
-              <Typography>veg</Typography>
-              <Typography>30.00</Typography>
+              <Typography className="vegIconPara smallPara"><img className="vegIcon" src={veg}/>veg</Typography>
+              <Typography className="smallPara">₹30.00</Typography>
               <Button className="btnAdd">Add to Cart</Button>
             </CardContent>
-            <CardMedia
-              className="itemImg"
-              image="http://source.unsplash.com/random"
-            ></CardMedia>
-          </Grid>{" "}
-          <Grid className="item"></Grid>{" "}
-        </Container>
-        <Container className="itemRow">
-          <Grid className="item">
-            <CardContent>
-              <Typography>Plain dosa</Typography>
-              <Typography>veg</Typography>
-              <Typography>30.00</Typography>
-              <Button>Add to Cart</Button>
-            </CardContent>
-            <CardMedia
-              className="itemImg"
-              image="http://source.unsplash.com/random"
-            ></CardMedia>
-          </Grid>{" "}
-          <Grid className="item"></Grid>{" "}
-        </Container>
-        <Container className="itemRow">
-          <Grid className="item">
-            <CardContent>
-              <Typography>Plain dosa</Typography>
-              <Typography>veg</Typography>
-              <Typography>30.00</Typography>
-              <Button variant="outlined">Add to Cart</Button>
-            </CardContent>
-            <CardMedia
-              className="itemImg"
-              image="http://source.unsplash.com/random"
-            ></CardMedia>
-          </Grid>{" "}
-          <Grid className="item"></Grid>{" "}
-        </Container>
-      </Box>
+            <CardMedia className="itemImg" image="https://pipingpotcurry.com/wp-content/uploads/2020/11/Dosa-recipe-plain-sada-dosa-Piping-Pot-Curry.jpg"></CardMedia>
+          </Grid>
+            )
+          })}
+      </Grid>
 
       <Box
         sx={{ width: 500 }}
-        style={{ position: "absolute", bottom: "0px", width: "100%" }}
+        style={{ position: "sticky", bottom: "0", width: "100%" }}
       >
         <BottomNavigation
           showLabels
