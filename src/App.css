@@ -14,6 +14,7 @@
   box-shadow: -3px 3px #00000042;
   overflow: hidden;
   padding: 0 0 0 1%;
+  background-color: rgb(219 206 241 / 37%);
 }
 .itemImg{
   height: 100%;
@@ -27,14 +28,15 @@
   padding: 2px !important;
 }
 .btnAdd{
-  border: 1px solid #fbff00 !important;
-  color: #fbff00 !important;
+  border: 1px solid rgb(82, 121, 207) !important;
+  color: rgb(82, 121, 207) !important;
   font-weight: 600 !important;
   text-transform: capitalize !important;
   height: 30px;
   width: 125px;
   font-weight: 600;
   z-index: 0 !important;
+  background-color: #f1be628a !important;
 }
 .vegIconPara{
   display: flex;
