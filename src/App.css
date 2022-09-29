@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+}
+body{
+  background: #F1F3FA;
+}
+.App>*{
+  background-color: white;
+}
+.App{
+  height: auto;
+}
+#navBar{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  height: 111px;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 15%);
+  margin-bottom: 30px;
+}
+#navBar img{
+  height: 100%;
+}
+#cartIconDiv{
+  position: relative;
+  cursor: grab;
+}
+#cartQuantityPara{
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  color: white;
+  font-size: 13px;
+  border-radius: 50%;
+  height: 20px;
+  background-color: #ff6161;
+  border: 1px solid #fff;
+  display: flex;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+#body{
+  display: flex;
+}
+#body-left{
+  width: 20%;
+  height: max-content;
+  position: sticky;
+  top: 0;
+}
+#store-info{
+  height: 150px;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+#store-name{
+  font-size: 24px;
+}
+.starFilled{
+  color: #f38a2e;
+  font-size: 30px !important;
+}
+.btnRevInfo{
+  text-transform: capitalize !important;
+    margin: 2px !important;
+    height: 25px;
+}
+#categories{
+  height: 360px;
+}
+.divCategory{
+  border-bottom: 1px solid #e4e4e4;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  padding: 7% 2%;
+  cursor: grab;
+}
+#body-right{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+#body-right-head{
+  display: flex;
+  font-family: 'Roboto';
+  align-items: center;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-left:1px solid #e4e4e4;
+}
+.green{
+  color: #618007;
+  font-weight: bold;
+}
+#storeOpen{
+  background-color: #618007;
+  color: white;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+.btnHeadblue{
+  color: #fff;
+  background-color: #5bc0de;
+  border:0;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 3px 10px;
+  height: 26px;
+  margin: 0 2px;
+}
+#body-right-head-para{
+  display: flex;
+  justify-content: space-between;
+  width: 32%;
+}
+#body-right-products{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(190px,1fr));
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+}
+.product{
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  position: relative;
+  height: 272px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.product:hover{
+  transform: scale(1.05);
+}
+.divQuantity{
+  position: absolute;
+    top: -8px;
+    right: -10px;
+    border: 1px solid;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    background-color: orange;
+    font-size: 14px;
+    z-index: 2;
+    visibility: hidden;
+}
+.visible{
+  visibility: visible !important;
+}
+.product>img{
+  height: 70%;
+}
+.productDetailsOuter{
+  height: 25%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 0% 0% 2%;
+}
+.productDetails{
+  display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weight{
+  font-size: 13px;
+  color: #525652;
+}
+#divAdd{
+  display: flex;
+  justify-content: space-between;
+  height: 19px;
+  border: 1px solid #c9c2c2;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 2% 0 5%;
+}
+#divAdd button{
+  width: 32%;
+  border: 0;
+  font-size: 20px;
+  background-color: #c52929d6;
+  color: white;
+}
+#divAdd p{
+  width: 36%;
+  height: 100%;
+  text-align: center;
+}
+#addBtns{
+  display: flex;
+  align-items: center;
+}
+.btnAdd{
+  background-color: #618007;
+  height: 30px;
+  color: white;
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid #618007;
+}
+
+
+#cartTable{
+  width: 70%;
+  margin: 1% 0;
+}
+#cartTable img{
+  height: 60px;
+  width: 90px;
+}
+#cartTable tr{
+  width: 100%;
+  margin: 1% 0;
+}
+#cartTable td{
+  width: 20%;
+  text-align: center;
+}
+#cartTable td>button{
+  height: 90%;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: transparent;
+}
+#paraSTotal{
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Satisfy', cursive;
+}
+#paraTaxes{
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Satisfy', cursive;
+}
+#paraGTotal{
+  text-align: right;
+  font-size: 25px;
+  font-family: 'Satisfy', cursive;
+}
+#btnBack{
+  width: 10%;
+  margin: 1% 44%;
+  border-radius: 15px;
+  font-size: 13px;
+}
+#footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer ul li {
+  list-style: none;
+  font-size: 10px;
+}
+#footerLinks {
+  display: flex;
+  width: 65%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px !important;
+}
+#footerLogo img{
+  height: 40px;
+}
