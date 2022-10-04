@@ -3,6 +3,7 @@ import React from 'react'
 const Bill = (props) => {
     const {cart,changeHandler,id,clickHandler,clickHandlerDelete}=props;
     let total=0;
+    if(cart.length>0){
   return (
     <div id={id}>
 		<div id="cartHead"><h1>Cart---	</h1><button id="btnEmptyCart" onClick={clickHandler}><i className="fa-solid fa-trash-can"></i></button></div>
@@ -13,6 +14,10 @@ const Bill = (props) => {
 		<strong id="gTotal">Grand total: ₹{total}.00</strong>
 	</div>
   )
+    }
+    else{
+      return <></>
+    }
 }
 
 export default Bill

@@ -6,7 +6,7 @@ import products from "./components/Data";
 import { useState } from "react";
 
 function App() {
-  
+
   let[Cart,setCart]=useState([]);
   const[id,setId]=useState("hidden")
   
@@ -40,7 +40,6 @@ function App() {
         Cart.splice(index,1)
       }
     }
-    hideCart();
     setCart([...Cart])
   }
 
@@ -48,20 +47,8 @@ function App() {
     let index=e.target.parentNode.parentNode.getAttribute("id")
     Cart.splice(index,1)
     setCart([...Cart])
-    hideCart();
   }
-
-   const hideCart=()=>{
-    if(Cart.length==0){
-      setId("hidden")
-    }
-    else{
-      setId("divCart")
-    }
-   }
-
   const emptyCart=()=>{
-   hideCart();
     Cart=[];
     setCart([...Cart])
   }
