@@ -1,15 +1,14 @@
 import { useState } from "react";
 import "./App.css";
-const error={income:"",expense:""}
+
 let idEdit=0;let indexEdit=0;let indexEditIncome=0;
-let numbers={totIncome:0,expense:0,balance:0,totGrocery:0,totVeggies:0,totTravel:0,totMisc:0}
 function App() {
-  const[Numbers,setNumbers]=useState(numbers)
+  const[Numbers,setNumbers]=useState({totIncome:0,expense:0,balance:0,totGrocery:0,totVeggies:0,totTravel:0,totMisc:0})
   const[Categories,setCategories]=useState([[],[],[],[]])
   const[Incomes,setIncomes]=useState([])
   const[btn,setBtn]=useState("Add")
   const[btnIncome,setBtnIncome]=useState("Add")
-  const[Error,setError]=useState(error)
+  const[Error,setError]=useState({income:"",expense:""})
   
   const addIncome=()=>{ 
     let obj={text:"",amt:0};
@@ -17,7 +16,7 @@ function App() {
     obj.amt=document.getElementById("IncomeAmount").value
     console.log(obj)
     if(obj.amt!=""&&obj.text!=""&&obj.amt!=0){
-      error.income="";
+      Error.income="";
       if(btnIncome=="Add"){
            Incomes.push(obj)
         }
@@ -26,15 +25,15 @@ function App() {
           setBtnIncome("Add")
        }
       calNumbers();
-      setIncomes([... Incomes])
+      setIncomes([...Incomes])
       document.getElementById("IncomeText").value="";
       document.getElementById("IncomeAmount").value="";
     }
     else{
-      error.income="Text and amount cannot be empty or less than 0"
+      Error.income="Text and amount cannot be empty or less than 0"
     }
-    console.log( Incomes)
-    setError({...error})
+    console.log(Incomes)
+    setError({...Error})
   }
 
   const addExpense=()=>{
@@ -43,7 +42,7 @@ function App() {
     obj.amt=document.getElementById("expenseAmount").value
     let category=document.getElementById("selCategory").value
     if(category>0 &&obj.text!=""&&obj.amt!=""&&obj.amt!=0){
-      error.expense="";
+      Error.expense="";
       if(btn==="Add"){
         Categories[category-1].push(obj)
     }
@@ -67,12 +66,12 @@ function App() {
     document.getElementById("selCategory").selectedIndex=0
     calNumbers();
     setCategories([...Categories])
-    setNumbers({...numbers})
+    setNumbers({...Numbers})
     }
     else{
-      error.expense="Text and amount cannot be empty or less than 0 and also select a category."
+      Error.expense="Text and amount cannot be empty or less than 0 and also select a category."
     }
-    setError({...error})
+    setError({...Error})
   }
 
   const clickDeleteExpense=(event)=>{
@@ -100,7 +99,7 @@ function App() {
   const clickDeleteIncome=(event)=>{
     let key=event.target.parentNode.getAttribute("id")
      Incomes.splice(key,1);
-    setIncomes([... Incomes])
+    setIncomes([...Incomes])
     calNumbers();
   }
   const clickEditIncome=(event)=>{
@@ -113,26 +112,26 @@ function App() {
   }
 
   const calNumbers=()=>{
-    numbers.expense=numbers.totGrocery=numbers.totVeggies=numbers.totTravel=numbers.totMisc=numbers.totIncome=0;
+    Numbers.expense=Numbers.totGrocery=Numbers.totVeggies=Numbers.totTravel=Numbers.totMisc=Numbers.totIncome=0;
 
     for(let i=0;i<Categories[0].length;i++){
-      numbers.totGrocery=parseFloat(parseFloat(numbers.totGrocery)+parseFloat(Categories[0][i].amt)).toFixed(2);
+      Numbers.totGrocery=parseFloat(parseFloat(Numbers.totGrocery)+parseFloat(Categories[0][i].amt)).toFixed(2);
     }
     for(let i=0;i<Categories[1].length;i++){
-      numbers.totVeggies=parseFloat(parseFloat(numbers.totVeggies)+parseFloat(Categories[1][i].amt)).toFixed(2);
+      Numbers.totVeggies=parseFloat(parseFloat(Numbers.totVeggies)+parseFloat(Categories[1][i].amt)).toFixed(2);
     }
     for(let i=0;i<Categories[2].length;i++){
-      numbers.totTravel=parseFloat(parseFloat(numbers.totTravel)+parseFloat(Categories[2][i].amt)).toFixed(2);
+      Numbers.totTravel=parseFloat(parseFloat(Numbers.totTravel)+parseFloat(Categories[2][i].amt)).toFixed(2);
     }
     for(let i=0;i<Categories[3].length;i++){
-      numbers.totMisc=parseFloat(parseFloat(numbers.totMisc)+parseFloat(Categories[3][i].amt)).toFixed(2);
+      Numbers.totMisc=parseFloat(parseFloat(Numbers.totMisc)+parseFloat(Categories[3][i].amt)).toFixed(2);
     }
     for(let i=0;i< Incomes.length;i++){
-      numbers.totIncome=parseFloat(parseFloat(numbers.totIncome)+parseFloat( Incomes[i].amt)).toFixed(2);
+      Numbers.totIncome=parseFloat(parseFloat(Numbers.totIncome)+parseFloat( Incomes[i].amt)).toFixed(2);
     }
-    numbers.expense=parseFloat(parseFloat(numbers.totGrocery)+parseFloat(numbers.totVeggies)+parseFloat(numbers.totTravel)+parseFloat(numbers.totMisc));
-    numbers.balance=parseFloat(parseFloat(numbers.totIncome)-parseFloat(numbers.expense));
-    setNumbers({...numbers})  
+    Numbers.expense=parseFloat(parseFloat(Numbers.totGrocery)+parseFloat(Numbers.totVeggies)+parseFloat(Numbers.totTravel)+parseFloat(Numbers.totMisc));
+    Numbers.balance=parseFloat(parseFloat(Numbers.totIncome)-parseFloat(Numbers.expense));
+    setNumbers({...Numbers})  
   } 
 
   return (
@@ -175,32 +174,32 @@ function App() {
         <p className="paraError">{Error.expense}</p>
         </div>
         <div id="Income">
-            <div className="header"><h3>Incomes</h3><p>Total- ₹{numbers.totIncome}/-</p></div>
+            <div className="header"><h3>Incomes</h3><p>Total- ₹{Numbers.totIncome}/-</p></div>
             <ul id="1" className="list">
-              { Incomes.map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditIncome}>Edit</button><button className="btnDelete" onClick={clickDeleteIncome}>Delete</button></div></li>})}
+              {Incomes.map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditIncome}>Edit</button><button className="btnDelete" onClick={clickDeleteIncome}>Delete</button></div></li>})}
             </ul>
           </div>
         <h3>Expenses</h3>
         <div className="Categories">
-        <div className="header"><h5>Grocery</h5><p>Total- ₹{numbers.totGrocery}/-</p></div>
+        <div className="header"><h5>Grocery</h5><p>Total- ₹{Numbers.totGrocery}/-</p></div>
         <ul id="1" className="list">
           {Categories[0].map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditExpense}>Edit</button><button className="btnDelete" onClick={clickDeleteExpense}>Delete</button></div></li>})}
         </ul>
         </div>
         <div className="Categories">
-        <div className="header"><h5>Veggies</h5><p>Total- ₹{numbers.totVeggies}/-</p></div>
+        <div className="header"><h5>Veggies</h5><p>Total- ₹{Numbers.totVeggies}/-</p></div>
         <ul id="2" className="list">
           {Categories[1].map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditExpense}>Edit</button><button className="btnDelete" onClick={clickDeleteExpense}>Delete</button></div></li>})}
         </ul>
         </div>
         <div className="Categories">
-        <div className="header"><h5>Travelling</h5><p>Total- ₹{numbers.totTravel}/-</p></div>
+        <div className="header"><h5>Travelling</h5><p>Total- ₹{Numbers.totTravel}/-</p></div>
         <ul id="3" className="list">
         {Categories[2].map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditExpense}>Edit</button><button className="btnDelete" onClick={clickDeleteExpense}>Delete</button></div></li>})}
         </ul>
         </div>
         <div className="Categories">
-        <div className="header"><h5>Miscellaneous</h5><p>Total- ₹{numbers.totMisc}/-</p></div>
+        <div className="header"><h5>Miscellaneous</h5><p>Total- ₹{Numbers.totMisc}/-</p></div>
         <ul id="4" className="list">
         {Categories[3].map((item,i)=>{return <li className="minus" id={i} key={i}>{item.text}<span>{item.amt}</span><div className="btns"><button className="btnEdit" onClick={clickEditExpense}>Edit</button><button className="btnDelete" onClick={clickDeleteExpense}>Delete</button></div></li>})}
         </ul>
