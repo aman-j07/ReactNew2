@@ -5,7 +5,6 @@ const Products = (props) => {
     const AddToCart=(e)=>{
       let index=e.target.parentNode.getAttribute("id")
       let obj=products[index-1];
-      obj.quantity=1;
       clickHandler(obj);
     }
   return (

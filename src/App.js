@@ -8,10 +8,10 @@ import { useState } from "react";
 function App() {
 
   let[Cart,setCart]=useState([]);
-  const[id,setId]=useState("hidden")
   
   const AddToCart=(obj)=>{
-    let index='';setId("divCart")
+    let index='';
+    console.log(obj)
     for(let i=0;i<Cart.length;i++){
       if(obj.id==Cart[i].id){
         index=i;
@@ -21,8 +21,10 @@ function App() {
       Cart[index].quantity++;
     }
     else{
+      obj.quantity=1;
       Cart.push(obj)
     }
+    console.log(Cart)
     setCart([...Cart])
   }
 
@@ -57,7 +59,7 @@ function App() {
     <div className="container">
       <Header />
       <Products products={products} clickHandler={AddToCart}/>
-      <Bill cart={Cart} changeHandler={updateQuantity} id={id} clickHandler={emptyCart} clickHandlerDelete={DeleteItem}/>
+      <Bill cart={Cart} changeHandler={updateQuantity} clickHandler={emptyCart} clickHandlerDelete={DeleteItem}/>
     </div>
   );
 }
