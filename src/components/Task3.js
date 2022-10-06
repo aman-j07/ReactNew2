@@ -13,11 +13,14 @@ const Task3 = () => {
         .catch(console.log("ERROR"))
     }
 
+    const keyDownHandler=(e)=>{if(e.key==="Enter"){
+        clickHandler();
+    }}
       if(user.length>2){
         return (
           <>
           <div id="divInp"><label>Enter GitHub Username</label>
-          <input value={username} onChange={(e) => setUsername(e.target.value)}/>
+          <input value={username} onChange={(e) => setUsername(e.target.value)} onKeyDown={keyDownHandler}/>
           <button onClick={clickHandler}>Search</button></div>
           <img src={user[3][1]}/>
             <table>
@@ -32,13 +35,13 @@ const Task3 = () => {
           }
           else if(user.length===2){
             return<><div id="divInp"><label>Enter GitHub Username</label>
-            <input value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input value={username} onChange={(e) => setUsername(e.target.value)} onKeyDown={keyDownHandler}/>
             <button onClick={clickHandler}>Search</button></div>
             <div>{user[0][1]}</div></>
           }
           else{
                 return<><div id="divInp"><label>Enter GitHub Username</label>
-                <input value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input value={username} onChange={(e) => setUsername(e.target.value)} onKeyDown={keyDownHandler}/>
                 <button onClick={clickHandler}>Search</button></div>
                 </>
           }
