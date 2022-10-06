@@ -34,7 +34,7 @@ const Task3 = () => {
             return<><div id="divInp"><label>Enter GitHub Username</label>
             <input value={username} onChange={(e) => setUsername(e.target.value)}/>
             <button onClick={clickHandler}>Search</button></div>
-            <div>User Not Found</div></>
+            <div>{user[0][1]}</div></>
           }
           else{
                 return<><div id="divInp"><label>Enter GitHub Username</label>
