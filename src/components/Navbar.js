@@ -39,8 +39,8 @@ const Navbar = () => {
           </li>
         </ul>
         <div id="navBtns">
-          <button id="btnStarted">GET STARTED FOR FREE</button>
-          <button id="btnLogin">Login</button>
+          <Link to="/signUp"><button id="btnStarted">GET STARTED FOR FREE</button></Link>
+          <Link to="/logIn"><button id="btnLogin">Login</button></Link>
         </div>
       </div>
     </div>

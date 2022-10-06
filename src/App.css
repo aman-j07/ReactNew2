@@ -34,7 +34,6 @@ a {
   color: #777;
   font-family: "Assistant";
   font-weight: 600;
-  width: 85%;
   justify-content: space-between;
   align-items: center;
   width: -webkit-fill-available;
@@ -311,7 +310,7 @@ background-color: #F8F9FD;
 .blogWriter{
 color: #718096;
 font-weight: 600;
-font-size: 14px;
+font-size: 14px !important;
 }
 .blogDate{
   color: #718096;
@@ -509,4 +508,259 @@ font-size: 14px;
   font-size: 35px;
   font-family: Assistant;
   margin: 64px 0
+}
+
+
+
+.resourcesCategory{
+  background-color: #F8F9FD;
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 106px;
+  }
+
+  .resourcesCategoryInner{
+    width: 80%;
+  }
+  .resourcesCategoryInner>div{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .resourcesCategoryInner>h2{
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .resourcesCategoryInner>div>div{
+    height: 370px;
+    width: 275px;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: rgb(222 222 222) 0px 1px 2px;
+  }
+  .resourcesCategoryInner>div>div img{
+    width: 100%;
+    height: 172px;
+  }
+  .resourcesCategoryInner>div>div>div{
+    display: flex;
+    padding: 0 4px;
+    flex-direction: column;
+    height: 195px;
+    justify-content: space-between;
+  }
+  .resourcesBlog{
+    height: 100px !important;
+  }
+  #divResourcesCategories{
+    width: 200px;
+  }
+  #resourcesCards>div p:nth-child(2){
+    font-size: 14px;
+  }
+  #resourcesCards>div p:first-child{
+    font-size: 20px;
+  }
+  .resourcesBlogDetails{
+   font-size: 12.8px;
+   display: flex;
+   align-items: center;
+   padding: 8px 4px;
+  }
+  .resourcesBlogDetails p{
+    margin: 0 2px;
+  }
+ 
+
+  #divSearch{
+    height: 37px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    padding: 0 2px;
+    border: 1px solid rgb(117, 117, 117);
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  #divSearch>input{
+    border: 0;
+    height: 100%;
+    width: 80%;
+  }
+  input:focus{
+    outline: none;
+  }
+  #divResourcesCategories ul{
+    list-style: none;
+    font-size: 16px;
+    font-family: Assistant;
+    width: 100%;
+    padding: 0;
+  }
+  #divResourcesCategories li:first-child{
+ color: #00a1f2;
+ font-size: 18px !important;
+  }
+  #divResourcesCategories li  {
+    color: rgb(117, 117, 117);
+    margin: 10px 0;
+  }
+  #signUp{
+    padding: 2rem 8rem;
+    background-image: linear-gradient(240deg, rgb(30, 151, 250), rgb(57, 190, 250));
+    color: white;
+    text-align: center;
+    font-family: 'Assistant';
+  }
+  #signUp h1{
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  #signUp h2{
+    font-size: 1.5rem;
+    margin: 8px 0 16px 0;
+    font-weight: 400;
+  }
+  #signUpInner{
+    display: flex;
+    padding: 0 5.9rem;
+    justify-content: space-around;
+    margin: 4rem 0;
+  }
+  .btnTrial{
+      font-size: 16px !important;
+      min-width: 100%;
+  }
+  #formSignUp{
+    background-color: white;
+    width: 300px;
+    height: 235px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #formSignUp>input{
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+#signUpReviews{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.signUpReview{
+  display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    align-items: flex-start;
+}
+.signUpReview img{
+  width: 80px;
+}
+.signUpReviewDetail{
+  width: 70%;
+  text-align: left;
+}
+.signUpReview p:first-child{
+  margin: 16px 0;
+}
+#divTrust{
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+#logIn{
+  background-image: linear-gradient(240deg, rgb(30, 151, 250), rgb(57, 190, 250));
+  color: white;
+  text-align: center;
+  font-family: 'Assistant';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 526px;
+}
+#logIn h2{
+  font-size: 24px;
+  font-family: Assistant;
+  font-weight: 400;
+  margin: 4rem 1rem 1rem;
+}
+#logIn h3{
+  font-size: 16px;
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+#formLogIn{
+  background-color: white;
+  color: black;
+  width: 475px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+#formLogIn>input{
+  border: 1px solid #ccc;
+  padding: 8px;
+  
+}
+#formLogIn div{
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+#formLogIn input{
+  padding: 8px;
+  margin: 8px 0;
+}
+.btnSearch{
+  font-size: 16px !important;
+  margin: auto;
+}
+.error{
+  color: red;
+  text-align: left;
+  font-size: 12px;
+}
+#cedcossOuter{
+  background-color: white;
+}
+#cedcoss{
+  display: flex;
+  margin: 8px;
+  padding: 8px 4px;
+  min-width: 400px;
+  border: 1px solid rgb(207, 207, 207);
+  justify-content: space-between;
+  align-items: center;
+}
+#cedcoss img{
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  padding: 8px 30px;
+}
+#cedcoss h4{
+  color: black;
+  font-weight: 400;
+}
+#cedcoss p{
+  color: #00a1f2;
+}
+#cedcoss>div{
+  text-align: left;
+}
+#btnDomain{
+  background-color: #718096;
+  color: white;
+  font-size: 16px;
+  margin: 8px 0 0;
+  padding: 8px 16px;
+  border: 0;
+}
+#btnDomain:hover{
+  background-color: #00a1f2;
 }
