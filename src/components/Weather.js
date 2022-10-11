@@ -9,20 +9,36 @@ const Weather = () => {
     setLocation(e.target.value)
     }
     const enterSearch=(e)=>{
-      let weat;
       if(e.key==="Enter"){
         fetch(weatherApi)
         .then(res=>res.json())
-        .then(data=>console.log(data))
-        console.log(weat)
-        setWeather(weat)
+        .then(data=>{
+          console.log(data)
+          setWeather(data)
+        })
       }
     }
+    if(weather===""){
   return (
-    <div>
+    <>
         <div id="searchBar"><SearchIcon/><input onChange={changeHandler} onKeyDown={enterSearch} placeholder='Search for your favourite location'/></div>
-    </div>
+    </>
   )
+    }
+    else{
+      return(
+        <>
+        <div id="searchBar"><SearchIcon/><input onChange={changeHandler} onKeyDown={enterSearch} placeholder='Search for your favourite location'/></div>
+        <div id="weatherDeatils">
+          <p>{weather.location.name}</p>
+          <p>{weather.location.region}</p>
+          <p>{weather.location.country}</p>
+          <p>{weather.current.temp_c}</p>
+          <p>{weather.current.condition.text}</p>
+        </div>
+    </> 
+      )
+    }
 }
 
 export default Weather
