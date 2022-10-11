@@ -1,29 +1,30 @@
-p{
-  margin: 0;
-}
 .App {
-  font-size: 14px;
-  text-align: center;
-}
-table{
-  margin: 10px auto;
-}
-table,tr,td,th{
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-td,th{
-  padding: 2px;
-}
-img{
-  height: 150px;
-  margin: 1%;
-}
-#divInp{
   display: flex;
   flex-direction: column;
-  height: 100px;
-  justify-content: space-evenly;
+  justify-content: center;
+  min-height: 606px;
+  background-image: url(https://images.unsplash.com/photo-1584267385494-9fdd9a71ad75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-size: 100% 110%;
+}
+#searchBar {
+  width: 50%;
+  display: flex;
+  border-radius: 5px;
+  margin: 10px auto;
+  justify-content: center;
+  height: 60px;
   align-items: center;
-  
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+#searchBar input {
+  height: 100%;
+  width: 88%;
+  border: 0;
+  margin-left: 10px;
+  font-size: 25px;
+}
+#searchBar input:focus {
+  outline: none;
 }
