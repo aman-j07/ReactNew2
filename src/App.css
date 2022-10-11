@@ -1,13 +1,46 @@
-*{
+* {
   margin: 0;
 }
-.App {
+#App {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   min-height: 606px;
   background-image: url(https://images.unsplash.com/photo-1584267385494-9fdd9a71ad75?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
   background-size: 100%;
+}
+.rainingNight {
+  background-image: url(https://i.pinimg.com/originals/f8/91/fb/f891fb6614e063415baa0496148423a2.gif) !important;
+}
+.rainingDay {
+  background-image: url(https://s-media-cache-ak0.pinimg.com/originals/91/2a/2a/912a2a3e04f3099b700d09a8d351ac6d.gif?w=640) !important;
+}
+.sunny {
+  background-image: url(https://d1pra95f92lrn3.cloudfront.net/media/thumb/1125_fit512.jpg) !important;
+}
+.cloudsNight {
+  background-image: url(https://images.unsplash.com/photo-1536183922588-166604504d5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80) !important;
+}
+.cloudsDay {
+  background-image: url(https://media.istockphoto.com/photos/blue-sky-background-with-white-clouds-picture-id1327185011?b=1&k=20&m=1327185011&s=170667a&w=0&h=ru7L4HLxzKW_u1KC9CJlRotdtM5zJW_X6iPhudwvLK4=) !important;
+}
+.night {
+  background-image: url(https://images.unsplash.com/photo-1507400492013-162706c8c05e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=359&q=80) !important;
+}
+
+#navBar {
+  position: absolute;
+  top: 0;
+  padding: 20px 5% 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+#navBar > * {
+  font-size: 40px;
+}
+#navBar pre {
+  font-size: 20px;
 }
 #searchBar {
   width: 50%;
@@ -31,11 +64,42 @@
 #searchBar input:focus {
   outline: none;
 }
-#weatherDeatils{
+#weatherDeatils {
   height: 200px;
   margin: auto;
-  width: 350px;
+  width: 200px;
   background-color: #00000082;
   color: white;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 0 2%;
+}
+#cityName {
+  font-size: 25px;
+}
+#cityRegion {
+  font-size: 15px;
+}
+#weatherDeatils > div {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
+#cityTemp {
+  position: relative;
+}
+#degreeIcon {
+  position: absolute;
+  font-size: 10px;
+  /* right: 2px; */
+  /* top: 15px; */
+}
+#celcius {
+  margin-left: 10px;
+    font-size: 28px;
+}
+#cityText {
 }
