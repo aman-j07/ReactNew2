@@ -1,12 +1,12 @@
 import "./App.css";
-import Weather from "./components/Weather";
-import CloudIcon from '@mui/icons-material/Cloud';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import Library from "./components/Library";
 
 function App() {
   return (
     <div id="App">
-      <div id="navBar"><CloudIcon/> <pre> WChecker</pre></div>
-      <Weather/>
+      <div id="navBar"><MenuBookIcon/> <pre> Library</pre></div>
+      <Library/>
     </div>
   );
 }
