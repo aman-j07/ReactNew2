@@ -16,10 +16,9 @@ const Library = () => {
         .then((res) => res.json())
         .then((data) => {
           for (let i = 0; i < data.docs.length; i++) {
-            data.docs[
-              i
-            ].cover_img = `https://covers.openlibrary.org/b/id/${data.docs[i].cover_i}.jpg`;
+            data.docs[i].cover_img = `https://covers.openlibrary.org/b/id/${data.docs[i].cover_i}.jpg`;
             data.docs[i].key = `https://openlibrary.org${data.docs[i].key}`;
+            console.log(data.docs[i])
           }
           setBooks(data.docs);
           document.getElementById("divLoading").classList.add("hidden");
@@ -62,14 +61,18 @@ const Library = () => {
         <div id="detailsOuter">
           {books.map((item, i) => {
             return (
-              <a key={i} href={item.key} target="_blank">
-                <div id="weatherDeatils">
-                  <p id="cityName">{item.title}</p>
-                  <p id="cityRegion">by {(item.author_name===undefined)?"":item.author_name[0]}</p>
-                  <img alt="Image not available" src={item.cover_img} />
-                  <p id="cityText">{item.cover_edition_key}</p>
+              <a key={i} href={item.key} target="_blank" >
+              <div id="weatherDeatils">
+                <p id="cityName">
+                  {item.title}
+                  </p>
+                <p id="cityRegion">
+                  by {item.author_name === undefined ? "unknown" : item.author_name[0]}
+                </p>
+                <img alt="Image not available" src={item.cover_img} />
+                <p id="cityText">{item.cover_edition_key}</p>
                 </div>
-              </a>
+                </a>
             );
           })}
         </div>
