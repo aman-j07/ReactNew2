@@ -5,7 +5,7 @@ import LandingPage2 from './components/LandingPage2';
 function App() {
   return (
     <div className="App">
-      {/* <LandingPage1/> */}
+      <LandingPage1/>
      <LandingPage2/>
     </div>
   );

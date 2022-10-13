@@ -1,24 +1,24 @@
 .App {
   text-align: center;
 }
-img {
+#landingPage1 img {
   width: 100%;
 }
 #divBtns {
   position: absolute;
   top: 10px;
-  right: 10%;
   display: flex;
   color: white;
   align-items: center;
-  min-width: 230px;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: flex-end;
 }
 #divBtns button {
   color: white;
   border: 0;
+  margin: 0 2%;
   border-radius: 4px;
-  width: 90px;
+  width: 8%;
   height: 30px;
   font-size: 12px;
   font-weight: 600;
@@ -31,4 +31,55 @@ img {
 }
 #btnLogin {
   background-color: #483da1;
+}
+#landingPage2 {
+  background-color: #62ab2a;
+}
+#landingPage2 > img {
+  width: 100%;
+}
+#formImageDiv {
+  display: flex;
+  min-height: 250px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2% 0;
+}
+#formImageDiv > img {
+  height: 180px;
+  min-width: 250px;
+}
+#formImageDiv p{
+  margin: -2% 0 2% 0;
+  font-size: 14px;
+  color: white;
+}
+#form {
+  padding: 2%;
+  background-color: #65c31c;
+  width: 396px;
+  text-align: left;
+  height: 70%;
+}
+.divInputs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 0 6% 0;
+  height: 25px;
+}
+.divInputs input {
+  width: 45%;
+  border-radius: 3px;
+  border: 0;
+  height: 100%;
+}
+#btnPre {
+  background-color: #fc2970;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 20px;
 }
