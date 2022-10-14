@@ -1,38 +1,111 @@
 .App {
+
+}
+*{
+  margin: 0;
+}
+#page1{
+  width: 300px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  position: relative;
+  background-color: #fdfeff;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+}
+#signUpIn{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+  position: absolute;
+  width: 94%;
+  top: 125px;
+}
+#signUp{
+  color: #4804e4;
+  margin: 0 10px;
+}
+#signIn{
+  color:#3c9cfc;
+}
+#page1 form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 35%;
+  margin: 30px 45px 5px;
+  align-items: center;
+}
+#page1 form>input{
+  height: 25px;
+  border-width: 0 0 2px 0;
+  border-color: #3c9cfc;
+  color: #4804e4;
+  padding: 0;
+  font-size: 15px;
+}
+#page1 ::placeholder {
+  color: #4804e4;
+}
+#page1 form>input:focus{
+  outline: 0;
+}
+#tnC{
+  display: flex;
+  font-size: 11px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 85%;
+  margin: 10px 0 0;
+}
+#tnC label{
+  color: #4804e4;
+}
+#tnC a{
+  color: #3c9cfc;
+}
+#btnSignUp{
+  color: white;
+  width: 120px;
+  margin: 50px auto 20px;
+  height: 30px;
+  background-color: #4804e4;
+  border: 0;
+  border-radius: 7px;
+}
+#aMember{
+  color: #4804e4;
+  font-size: 11px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#navBar{
+  height: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #609ce4;
+}
+#navBarLogo{
+  display: flex;
+  height: 45%;
+  align-items: center;
   color: white;
+  font-size: 25px;
+  font-weight: 600;
 }
-
-.App-link {
-  color: #61dafb;
+#navBarLogo img{
+  height: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#info{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #20344C;
+}
+#page2 img{
+  width: 100%;
 }
