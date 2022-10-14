@@ -1,10 +1,9 @@
 .App {
-
 }
-*{
+* {
   margin: 0;
 }
-#page1{
+#page1 {
   width: 300px;
   height: 550px;
   display: flex;
@@ -16,7 +15,7 @@
   overflow: hidden;
   border: 1px solid #dddddd;
 }
-#signUpIn{
+#signUpIn {
   display: flex;
   justify-content: flex-end;
   font-size: 15px;
@@ -24,14 +23,14 @@
   width: 94%;
   top: 125px;
 }
-#signUp{
+#signUp {
   color: #4804e4;
   margin: 0 10px;
 }
-#signIn{
-  color:#3c9cfc;
+#signIn {
+  color: #3c9cfc;
 }
-#page1 form{
+#page1 form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -39,7 +38,7 @@
   margin: 30px 45px 5px;
   align-items: center;
 }
-#page1 form>input{
+#page1 form > input {
   height: 25px;
   border-width: 0 0 2px 0;
   border-color: #3c9cfc;
@@ -50,10 +49,10 @@
 #page1 ::placeholder {
   color: #4804e4;
 }
-#page1 form>input:focus{
+#page1 form > input:focus {
   outline: 0;
 }
-#tnC{
+#tnC {
   display: flex;
   font-size: 11px;
   align-items: center;
@@ -61,13 +60,27 @@
   width: 85%;
   margin: 10px 0 0;
 }
-#tnC label{
+#tnC label {
   color: #4804e4;
 }
-#tnC a{
+#tnC a {
   color: #3c9cfc;
 }
-#btnSignUp{
+#divCheck {
+  overflow: hidden;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+  text-align: center;
+}
+#tnC input {
+  height: 17px;
+  width: 17px;
+  margin: -1px;
+  outline: 1px solid white;
+}
+#btnSignUp {
   color: white;
   width: 120px;
   margin: 50px auto 20px;
@@ -76,20 +89,19 @@
   border: 0;
   border-radius: 7px;
 }
-#aMember{
+#aMember {
   color: #4804e4;
   font-size: 11px;
   text-align: center;
 }
 
-
-#navBar{
+#navBar {
   height: 60px;
   display: flex;
   align-items: center;
   background-color: #609ce4;
 }
-#navBarLogo{
+#navBarLogo {
   display: flex;
   height: 45%;
   align-items: center;
@@ -97,15 +109,15 @@
   font-size: 25px;
   font-weight: 600;
 }
-#navBarLogo img{
+#navBarLogo img {
   height: 100%;
 }
-#info{
+#info {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: #20344C;
+  background-color: #20344c;
 }
-#page2 img{
+#page2 img {
   width: 100%;
 }
