@@ -1,27 +1,29 @@
 * {
   margin: 0;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
-a:hover{
+a:hover {
   color: #08318f;
 }
 #App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   min-height: 606px;
   background-color: #e1dcc5;
-   background-size: 100%;
+  background-size: 100%;
 }
 #navBar {
-  position: absolute;
-  top: 0;
-  padding: 20px 5% 0;
+  padding: 0 0 0 3%;
+  color: white;
   display: flex;
+  background-color: #938b6c;
   align-items: center;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  width: 97%;
+  height: 80px;
+  position: sticky;
+  top: 0px;
 }
 #navBar > * {
   font-size: 40px;
@@ -29,8 +31,13 @@ a:hover{
 #navBar pre {
   font-size: 20px;
 }
+#searchOuter {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
 #searchBar {
-  width: 50%;
+  width: 75%;
   display: flex;
   border-radius: 5px;
   margin: 10px auto;
@@ -40,6 +47,10 @@ a:hover{
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: white;
+  color: black;
+}
+#searchbar * {
+  z-index: 2;
 }
 #searchBar input {
   height: 100%;
@@ -47,32 +58,34 @@ a:hover{
   border: 0;
   margin-left: 10px;
   font-size: 25px;
+  z-index: 2;
 }
 #searchBar input:focus {
   outline: none;
 }
-#divLoading{
+#divLoading {
   text-align: center;
   font-size: 20px;
 }
-#divLoading img{
+#divLoading img {
   height: 20px;
   width: 20px;
   margin: 0 1px;
 }
-.hidden{
+.hidden {
   visibility: hidden;
   height: 0;
   overflow: hidden;
 }
-#detailsOuter{
+#detailsOuter {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(175px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   gap: 50px;
   background-color: white;
-  margin: 20px auto;
+  margin: 50px auto;
   width: 70%;
   padding: 4%;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 #weatherDeatils {
   height: 320px;
@@ -87,6 +100,9 @@ a:hover{
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 0 2%;
+}
+#weatherDeatils:hover {
+  transform: scale(1.1);
 }
 #cityName {
   font-size: 20px;
@@ -108,7 +124,7 @@ a:hover{
 #cityTemp {
   position: relative;
 }
-#btnSearchGoogle{
+#btnSearchGoogle {
   color: white;
   background-color: #1c4ab3;
   border: 0;
@@ -116,6 +132,49 @@ a:hover{
   font-size: 15px;
   padding: 5px;
 }
-#googleIcon{
+#googleIcon {
   font-size: 12px;
+}
+#footer {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3e4044;
+  justify-content: space-evenly;
+}
+#footerLogoDiv {
+  display: flex;
+  height: 40px;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#footerLogoDiv select {
+  background-color: transparent;
+  color: white;
+  height: 90%;
+  border-radius: 3px;
+}
+#footer ul li {
+  list-style: none;
+  font-size: 10px;
+  color: white;
+}
+#footerLinks {
+  display: flex;
+  width: 65%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px !important;
 }
