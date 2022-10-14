@@ -16,7 +16,6 @@ const Library = () => {
       for (let i = 0; i < data.docs.length; i++) {
         data.docs[i].cover_img = `https://covers.openlibrary.org/b/id/${data.docs[i].cover_i}.jpg`;
         data.docs[i].key = `https://openlibrary.org${data.docs[i].key}`;
-        console.log(data.docs[i]);
       }
       setBooks(data.docs);
       document.getElementById("divLoading").classList.add("hidden");
@@ -33,11 +32,8 @@ const Library = () => {
         .then((res) => res.json())
         .then((data) => {
           for (let i = 0; i < data.docs.length; i++) {
-            data.docs[
-              i
-            ].cover_img = `https://covers.openlibrary.org/b/id/${data.docs[i].cover_i}.jpg`;
+            data.docs[i].cover_img = `https://covers.openlibrary.org/b/id/${data.docs[i].cover_i}.jpg`;
             data.docs[i].key = `https://openlibrary.org${data.docs[i].key}`;
-            console.log(data.docs[i]);
           }
           setBooks(data.docs);
           document.getElementById("divLoading").classList.add("hidden");
