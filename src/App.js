@@ -1,10 +1,10 @@
 import "./App.css";
-import Clock from "./components/Clock";
+import Map from "./components/Map";
 
 function App() {
   return (
     <div id="App">
-      <Clock/>
+      <Map/>
     </div>
   );
 }
