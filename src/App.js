@@ -1,10 +1,10 @@
 import "./App.css";
-import ColorAdjustmentTool from "./components/ColorAdjustmentTool";
+import ContentAdjustmentTool from "./components/ContentAdjustmentTool";
 
 function App() {
   return (
     <div id="App">
-      <ColorAdjustmentTool/>
+      <ContentAdjustmentTool/>
     </div>
   );
 }
