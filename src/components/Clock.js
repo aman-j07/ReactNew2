@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 const timezones=[
@@ -35,16 +35,12 @@ const timezones=[
 ["CAT(Central African Time)",-1],
 ];
 function Clock() {
-  let refTime=useRef();
-var intervalTime;
-let isRunning=true;
-const [time,setTime]=useState(new Date().toLocaleTimeString({
-  hour: "00",
-  minute: "00",
-  second: "00",
-}));
+var intervalTime,intervalTimezone;
+let offset;
+const [time,setTime]=useState();
+const [timezone,setTimezone]=useState();
 
-const getCurrentTime = (time) => {
+const getCurrentTime = () => {
   let hour, minute, second;
   setTime(new Date().toLocaleTimeString({
     hour: hour,
@@ -54,28 +50,19 @@ const getCurrentTime = (time) => {
 };
 
 useEffect(()=>{
-  console.log("dasd")
-  // if(isRunning){
-    intervalTime=setInterval(getCurrentTime, 1000);
-    console.log(intervalTime)
-  // }
-  // else{
-  //   clearInterval(intervalTime)
-  // }
-    
+  intervalTime=setInterval(getCurrentTime, 1000);
 },[])
 
-function calcTime(offset) {
+function calcTime() {
+  console.log("update timezone")
   var d = new Date();
   var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
   // var nd = new Date(utc + (3600000*offset));
   let hour, minute, second;
-
-  console.log("interval = ", intervalTime)
-  isRunning=false;
-  clearInterval(intervalTime)
-  console.log("interval = ", intervalTime)
-  setTime(new Date(utc + (3600000*offset)).toLocaleTimeString({
+  // console.log("interval = ", intervalTime)
+  // clearInterval(intervalTime)
+  // console.log("interval = ", intervalTime)
+  setTimezone(new Date(utc + (3600000*offset)).toLocaleTimeString({
     hour: hour,
     minute: minute,
     second: second,
@@ -90,221 +77,24 @@ function calcTime(offset) {
   
 }
 
-
-// const setTime=()=>{
-
-//   let Gseconds = parseInt($("#inpSeconds").val());
-//   let Gminutes = parseInt($("#inpMinutes").val());
-//   let Ghours = parseInt($("#inpHours").val());
-
-//   if(Gdat>countDays){
-//     $("#errorDate").html("This month consists of only "+countDays)
-//   }
-//   else{
-//     if(Gmonth>12){
-//       $("#errorDate").html("Month cannot exceed 12")
-//     }
-//     else{
-//       console.log(Gdat + " " + Gmonth + " " + Gyear)
-//       newDate=new Date(Gmonth+"/"+Gdat+"/"+Gyear)
-//       console.log(newDate);
-//       Gday=$days[newDate.getDay()];
-//       GfullDate =  Gday+ " " + Gdat + " " + Gmonth + " " + Gyear;
-//       $("#date").html(GfullDate);
-//       console.log("fulldate--",GfullDate)
-
-//   if(Ghours>12 || Gminutes>59 ||Gseconds>59){
-//      $("#errorTime").html("Enter a valid time")
-//   }
-//   else if(isNaN(Ghours) || isNaN(Gminutes) || isNaN(Gseconds)){
-//     $("#errorTime").html("Any field cannot be empty")
-//   }
-//   else{
-//     $("#error").html("");
-//     clearInterval(intervalUpdate);
-//   Gampm = $("#selAMPM :selected").text();
-//   $("#minute").html(Gminutes);
-//     $("#second").html(Gseconds);
-//     $("#hour").html(Ghours);
-//     $("#ampm").html(Gampm);
-//   $("#inpSeconds").val("");
-//   $("#inpMinutes").val("");
-//   $("#inpHours").val("");
-//   intervalAfterSet = window.setInterval($updateAfterSet, 1000);
-//   }
-
-// }
-// }
-
-// });
-
-// function $updateAfterSet() {
-//   Gseconds++;
-//   if (Gseconds < 60) {
-//     $("#minute").html(Gminutes);
-//     $("#second").html(Gseconds);
-//     $("#hour").html(Ghours);
-//     $("#ampm").html(Gampm);
-//     console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//   } else if (Gseconds == 60) {
-//     console.log("seconds exceeded");
-//     Gseconds = 0;
-//     Gminutes++;
-
-//     if (Gminutes < 60) {
-//       $("#minute").html(Gminutes);
-//       $("#second").html(Gseconds);
-//       $("#hour").html(Ghours);
-//       $("#ampm").html(Gampm);
-//       console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//     } else if (Gminutes == 60) {
-//       console.log("minutes exceeded");
-//       Ghours++;
-//       Gminutes = 0;
-
-//       if(Gampm=="AM"){
-//         if(Ghours<12){
-//           console.log("hours<12 and Am")
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-//         else if(Ghours==12){
-//           console.log("hours=12 and Am")
-//           Gampm="PM"
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-//         else if(Ghours>12){
-//           console.log("hours>12 and Am")
-//           Ghours=1;
-//           Gampm="PM"
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-//       }
-//       else if(Gampm=="PM"){
-//         if(Ghours<12){
-//           console.log("hours<12 and pm")
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-//         else if(Ghours==12){
-//           console.log("hours=12 and pm")
-//           if(Gdat<$daysInMonth(Gmonth,Gyear)){
-
-//             Gdat++;
-//            }
-//            else if(Gdat==$daysInMonth(Gmonth,Gyear)){
-//             if(Gmonth<12){
-//             Gmonth++;
-//             Gdat=1;
-//              newDate=new Date(Gmonth+"/"+Gdat+"/"+Gyear)
-//              console.log(newDate)
-//              Gday=$days[newDate.getDay()];
-//              GfullDate =  Gday+ " " + Gdat + " " + Gmonth + " " + Gyear;
-//              $("#date").html(GfullDate);
-//              console.log("fulldate--",GfullDate)
-//             }
-//             else if(Gmonth==12){
-//               Gdat=1;
-//               Gmonth=1;
-//               Gyear++;
-//               newDate=new Date(Gmonth+"/"+Gdat+"/"+Gyear)
-//               console.log(newDate)
-//               console.log(newDate.getDay())
-//               Gday=$days[newDate.getDay()];
-//               GfullDate =  Gday+ " " + Gdat + " " + Gmonth + " " + Gyear;
-//               $("#date").html(GfullDate);
-//               console.log("fulldate--",GfullDate)
-//             }
-//             }
-//           Gampm="AM"
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-
-//         else if(Ghours>12){
-//           console.log("hours>12 and pm")
-//           Ghours=1;
-//           Gampm="AM"
-//           $("#minute").html(Gminutes);
-//           $("#second").html(Gseconds);
-//           $("#hour").html(Ghours);
-//           $("#ampm").html(Gampm);
-//           console.log(Ghours + ":" + Gminutes + ":" + Gseconds+" "+Gampm);
-//         }
-
-//       }
-//     }
-//   }
-// }
-
 const changeTimezone=(e)=>{
-  let offset=timezones[e.target.selectedIndex][1]
-  calcTime(offset);
+  clearInterval(intervalTimezone)
+  offset=timezones[e.target.selectedIndex][1]
+  intervalTimezone=setInterval(calcTime,1000);
 }
 
 
   return (
     <div id="parent">
-        <div id="time" ref={refTime}>{time}</div>
+        <div id="time">{time}</div>
         <select onChange={changeTimezone}>
           {timezones.map((item,i)=>{
             return <option key={i}>{item[0]}</option>
           })}
         </select>
+        <div id="timezone">{timezone}</div>
     </div>
   )
 }
 
 export default Clock
-
-
-// export class Clock extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       time: this.getCurrentTime(),
-//     };
-//   }
-//   getCurrentTime = () => {
-//     let hour, minute, second;
-//     let time = new Date().toLocaleTimeString({
-//       hour: hour,
-//       minute: minute,
-//       second: second,
-//     });
-//     return time;
-//   };
-
-//   componentDidMount() {
-//     setInterval(() => {
-//       this.setState({ time: this.getCurrentTime() });
-//     }, 1000);
-//   }
-
-//   render() {
-//     return (
-//       <div id="parent">
-//         <div id="time">{this.state.time}</div>
-//       </div>
-//     );
-//   }
-// }
-
-// export default Clock;
