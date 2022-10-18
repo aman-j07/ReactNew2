@@ -10,7 +10,7 @@ a:hover {
 }
 #App {
   min-height: 606px;
-  background-color: #e1dcc5;
+  background-color: #b7b6b2;
   background-size: 100%;
 }
 #navBar {
@@ -18,7 +18,7 @@ a:hover {
   color: white;
   display: flex;
   justify-content: space-between;
-  background-color: #938b6c;
+  background-color: black;
   align-items: center;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
   width: 97%;
