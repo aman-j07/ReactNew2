@@ -1,5 +1,4 @@
-import SearchIcon from "@mui/icons-material/Search";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
+import NewspaperIcon from '@mui/icons-material/Newspaper';
 import loading from "./4.gif";
 import { useEffect, useState } from "react";
 
@@ -28,25 +27,25 @@ const Library = () => {
         setBooks2(books2)
         setBooks(data.articles);
       });
-      fetch(`https://newsapi.org/v2/everything?country=in&category=business&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
+      fetch(`https://newsapi.org/v2/top-headlines?country=in&category=business&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setBusiness(data.articles);
       });
-      fetch(`https://newsapi.org/v2/everything?country=in&category=sports&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
+      fetch(`https://newsapi.org/v2/top-headlines?country=in&category=sports&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setSports(data.articles);
       });
-      fetch(`https://newsapi.org/v2/everything?country=in&category=health&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
+      fetch(`https://newsapi.org/v2/top-headlines?country=in&category=health&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setHealth(data.articles);
       });
-      fetch(`https://newsapi.org/v2/everything?country=in&category=technology&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
+      fetch(`https://newsapi.org/v2/top-headlines?country=in&category=technology&pageSize=3&apiKey=de713b26887d4c68a61209262645aa51`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -80,20 +79,10 @@ const Library = () => {
   return (
     <>
       <div id="navBar">
-        <MenuBookIcon /> <pre> Library</pre>{" "}
-        <div id="searchOuter">
-          <div id="searchBar">
-            <SearchIcon />
-            <input
-              onChange={changeHandler}
-              onKeyDown={enterSearch}
-              placeholder="Search for your favourite book"
-            />
-          </div>
-          <div id="divLoading" className="hidden">
+      <div id="divLogo"><NewspaperIcon /> <pre> News</pre></div><div id="divLinks"><p>Home</p><p>Categories</p><p>Partners</p><p>About Us</p><p>Contact Us</p></div>
+        <div id="divLoading" className="hidden">
             Loading <img src={loading} />
           </div>
-        </div>
       </div>
       <div id="detailsTrendingOuter">
       <h2 id="hTrending"> Trending</h2>

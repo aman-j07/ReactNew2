@@ -17,6 +17,7 @@ a:hover {
   padding: 0 0 0 3%;
   color: white;
   display: flex;
+  justify-content: space-between;
   background-color: #938b6c;
   align-items: center;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
@@ -25,11 +26,25 @@ a:hover {
   position: sticky;
   top: 0px;
 }
-#navBar > * {
+#divLogo {
+  display: flex;
+  align-items: center;
+}
+#divLinks {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+}
+#divLinks p {
+    font-family: monospace;
+    font-size: 16px;
+    cursor: grab;
+}
+#divLogo > * {
   font-size: 40px;
 }
 #navBar pre {
-  font-size: 20px;
+  font-size: 25px;
 }
 #searchOuter {
   width: 80%;
@@ -77,25 +92,25 @@ a:hover {
   height: 0;
   overflow: hidden;
 }
-#detailsTrendingOuter{
+#detailsTrendingOuter {
   background-color: white;
-    margin:50px auto;
-    width: 90%;
-    padding: 2%;
-    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  margin: 50px auto;
+  width: 90%;
+  padding: 2%;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
-#hTrending{
+#hTrending {
   margin: 1%;
   font-size: 30px;
 }
-#detailsTrending{
-    display: flex;
-    justify-content: space-evenly;
+#detailsTrending {
+  display: flex;
+  justify-content: space-evenly;
 }
-#detailsTrending>a{
+#detailsTrending > a {
   width: 48%;
 }
-.trendingDetails{
+.trendingDetails {
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -103,14 +118,14 @@ a:hover {
   background-size: 100% 100%;
   color: white;
 }
-#trendingRightDiv{
-width: 48%;
-display: grid;
-grid-template-columns: repeat(2,1fr);
-grid-template-rows: repeat(2,1fr);
-gap: 10px;
+#trendingRightDiv {
+  width: 48%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
 }
-.trendingDetailsDiv{
+.trendingDetailsDiv {
   height: 99%;
   color: white;
   display: flex;
@@ -150,7 +165,7 @@ gap: 10px;
   flex-direction: column;
   justify-content: flex-end;
 }
-#detailsText{
+#detailsText {
   background-color: #0000008c;
   height: 40%;
   display: flex;
