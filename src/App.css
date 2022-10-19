@@ -18,9 +18,14 @@
 }
 #resultDiv h2 {
   margin: 10px 0;
+  background-color: white;
 }
 #resultDiv p {
   margin: 10px 0;
+  background-color: white;
+}
+#resultDiv a{
+  background-color: white;
 }
 #toolsContent {
   width: 45%;
@@ -83,4 +88,16 @@
 }
 .outlined {
   border: 4px solid #4e9dd5;
+}
+.magnify:hover{
+  transform: scale(1.25);
+  cursor: grab;
+}
+.highlight{
+  background-color: black !important;
+  color: white !important;
+}
+.clicked{
+  background-color: #21467c !important;
+  color: white;
 }
