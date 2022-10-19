@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 
 const timezones=[
+["Select Timezone",5.5],
 ["UTC(Universal Coordinated Time)",0],
 ["ECT(European Central Time)",1],
 ["EET(Eastern European Time)",2],
@@ -35,10 +36,8 @@ const timezones=[
 ["CAT(Central African Time)",-1],
 ];
 function Clock() {
-var intervalTime,intervalTimezone;
-let offset;
+let intervalTime=useRef(0);
 const [time,setTime]=useState();
-const [timezone,setTimezone]=useState();
 
 const getCurrentTime = () => {
   let hour, minute, second;
@@ -50,49 +49,35 @@ const getCurrentTime = () => {
 };
 
 useEffect(()=>{
-  intervalTime=setInterval(getCurrentTime, 1000);
+  intervalTime.current=setInterval(getCurrentTime, 1000);
+  return ()=> clearInterval(intervalTime.current)
 },[])
 
-function calcTime() {
-  console.log("update timezone")
+const changeTimezone=(e)=>{
+  let offset=timezones[e.target.selectedIndex][1];
+  clearInterval(intervalTime.current)
+  intervalTime.current=setInterval(function(){getTimezoneTime(offset);},1000)
+}
+const getTimezoneTime=(offset)=>{
   var d = new Date();
   var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-  // var nd = new Date(utc + (3600000*offset));
   let hour, minute, second;
-  // console.log("interval = ", intervalTime)
-  // clearInterval(intervalTime)
-  // console.log("interval = ", intervalTime)
-  setTimezone(new Date(utc + (3600000*offset)).toLocaleTimeString({
+  setTime(new Date(utc + (3600000*offset)).toLocaleTimeString({
     hour: hour,
     minute: minute,
     second: second,
   }))
-  // console.log(nd.toLocaleString());
-  // var time=new Date(nd)
-  // console.log("time :",time)
-  // let hr=console.log(time.getHours())
-  // let min=console.log(time.getMinutes())
-  // let sec=console.log(time.getSeconds())
-  // console.log(time.getTime().toString)
-  
-}
-
-const changeTimezone=(e)=>{
-  clearInterval(intervalTimezone)
-  offset=timezones[e.target.selectedIndex][1]
-  intervalTimezone=setInterval(calcTime,1000);
 }
 
 
   return (
     <div id="parent">
-        <div id="time">{time}</div>
-        <select onChange={changeTimezone}>
+      <select onChange={changeTimezone}>
           {timezones.map((item,i)=>{
             return <option key={i}>{item[0]}</option>
           })}
         </select>
-        <div id="timezone">{timezone}</div>
+        <div id="time">{time}</div>
     </div>
   )
 }
