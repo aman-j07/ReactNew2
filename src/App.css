@@ -4,6 +4,9 @@
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
 }
+.container{
+  background-color: #b7b6b2;
+}
 #navBar {
   height: 75px;
   display: flex;
@@ -127,16 +130,16 @@ textarea:focus{
   outline:0;
 }
 #feed{
-  width: 50%;
+  width: 80%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
 }
 #divImg{
   height: 250px;
-  /* background-image: url(https://images.unsplash.com/photo-1560780552-ba54683cb263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80); */
-  /* background-size: 100% 200%; */
   background-image: url(https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
   background-size: 100% 100%;
   display: flex;
@@ -157,11 +160,13 @@ textarea:focus{
   font-style: italic;
 }
 #content{
-  width: 100%;
   height: 180px;
-  margin: 2% 0;
   overflow: hidden;
   cursor: grab;
+  border: 1px solid #efe9e9;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  padding: 5%;
+  border-radius: 5px;
 }
 #content *{
   cursor: grab;
@@ -169,16 +174,12 @@ textarea:focus{
 #contentFull{
   height: auto !important;
 }
-hr{
-  width: 110%;
-}
 #header{
   font-family: 'Crimson Text', serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 600;
 }
 #body{
-  font-size: 20px;
   font-family: 'EB Garamond', serif;
 }
 #newBlog{

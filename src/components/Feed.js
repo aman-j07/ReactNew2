@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import BlogDetails from "./BlogDetails";
 
 
 const Feed = (props) => {
@@ -47,7 +46,7 @@ const Feed = (props) => {
     blogs.push(obj)
     setBlogs([...blogs]);
     setId("hidden");
-    alert("Blog added successfully")
+    alert("Note added successfully")
   }
 
   const expandBlog=(e)=>{
@@ -57,27 +56,21 @@ const Feed = (props) => {
     });
     console.log(arr)
     let index=e.target.closest("#content").setAttribute("id","contentFull")
-    // console.log(blogs[index])
-    // window.scrollTo(0, 160)
-    // setIdDetail(["hidden",blogs[index],"blogComponent"])
   }
 
-  const closeBlog=()=>{
-    setIdDetail(["feed","","hidden"])
-  }
+ 
 
   return (
     <>
       <div id="navBar">
-        <h2>Socialify</h2>
+        <h2>Notify</h2>
         <div>
-          <a onClick={props.clickHandler}>Log Out</a>
-          <a onClick={showAdd}>Add a Blog</a>
+          <a onClick={showAdd}>Add a Note</a>
         </div>
       </div>
-      <div id="divImg"><h2>Socialify</h2><p>Blogs to read</p></div>
+      <div id="divImg"><h2>Notify</h2><p>Handy Notes</p></div>
       <div id={id}>
-        <h2>Add New Blog</h2><form id="formBlog"><input id="inpTitle" placeholder="Enter Title" type="text"/>
+        <h2>Add New Note</h2><form id="formBlog"><input id="inpTitle" placeholder="Enter Title" type="text"/>
            <textarea id="inpDescription" placeholder="Enter Description" type="text"/></form><button onClick={addBlog}>Add</button></div>
       <div id="feed">
         {blogs.map((item,i) => {
@@ -85,12 +78,10 @@ const Feed = (props) => {
             <div index={i} onClick={expandBlog} className="item" id={idDetail}>
               <div id="header">{item.head}</div>
               <div id="body">{item.description}</div>
-            </div>
-            <hr/></>
+            </div></>
           );
         })}
       </div>
-      {/* <BlogDetails obj={idDetail[1]} id={idDetail[2]} closeBlog={closeBlog}/> */}
     </>
   );
 };
