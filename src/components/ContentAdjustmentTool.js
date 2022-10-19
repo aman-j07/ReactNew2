@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import Icon from '@mui/material/Icon';
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import Brightness3Icon from "@mui/icons-material/Brightness2";
-import Brightness6Icon from "@mui/icons-material/Brightness6";
+import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 
 function ContentAdjustmentTool() {
   const colorsArray = ["violet","indigo","yellow","orange","red","white","black",]
@@ -43,8 +46,8 @@ function ContentAdjustmentTool() {
     <div id="container">
     <div id="toolsContent">
       <div contrast="contrast(200%)" onClick={changeContrast}>
-        <WbSunnyIcon />
-        Dark contrast
+        <ZoomOutMapIcon/>
+        Content Scaling
       </div>
       <div contrast="contrast(200%)" onClick={changeContrast}>
         <WbSunnyIcon />
