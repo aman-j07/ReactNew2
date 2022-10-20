@@ -1,218 +1,138 @@
 * {
   margin: 0;
-  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
 }
-.container{
+#App {
+  min-height: 606px;
   background-color: #b7b6b2;
+  background-size: 100%;
 }
 #navBar {
-  height: 75px;
+  padding: 0 0 0 3%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  width: 97%;
+  height: 80px;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+#divLogo {
   display: flex;
   align-items: center;
-  background-color: #09094c;
-  justify-content: space-between;
-  padding: 0 10%;
 }
-#navBar > h2 {
-  color: white;
-  font-size: 35px;
-  font-family: "Source Serif Pro", serif;
-}
-#navBar > div > a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  margin: 0 5px;
-}
-#containerSignLog {
+#divLinks {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 100%;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-size: 50% 108%;
-  height: 530px;
-  background-image: url(https://image.shutterstock.com/shutterstock/photos/228370189/display_1500/stock-vector-social-media-background-people-connecting-through-modern-technology-devices-228370189.jpg);
+  width: 60%;
+  justify-content: space-evenly;
 }
-#signLog {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 2% 14%;
-  background-color: #dfdfdfd1;
-  border-radius: 5px;
-  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
-    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
-    rgb(0 0 0 / 9%) 0px -3px 5px;
-  padding: 1% 5%;
-}
-.signLogHeading {
-  font-size: 22px;
-}
-#signLog > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-#signLog button {
-  width: 183px;
-  background-color: #09094c;
-  border: 1px solid #8d8888;
-  border-radius: 3px;
-  height: 30px;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-}
-#signLog input {
-  height: 22px;
-  border-radius: 3px;
-  border: 0.5px solid #8d8888;
-}
-a{
+#divLinks p {
+  font-family: monospace;
+  font-size: 16px;
   cursor: grab;
 }
-input:focus {
+#divLogo > * {
+  font-size: 30px;
+}
+#navBar pre {
+  font-size: 22px;
+  margin: 0 2px;
+}
+#searchOuter {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+#searchBar {
+  width: 75%;
+  display: flex;
+  border-radius: 5px;
+  margin: 10px auto;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: white;
+  color: black;
+}
+#searchbar * {
+  z-index: 2;
+}
+#searchBar input {
+  height: 100%;
+  width: 88%;
+  border: 0;
+  margin-left: 10px;
+  font-size: 25px;
+  z-index: 2;
+}
+#searchBar input:focus {
   outline: none;
 }
-#hidden{
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
-}
-#signUp {
-  height: 400px;
-  margin: 4% 0;
-}
-#logIn {
-  height: 150px;
-}
-#signUp > div {
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  justify-content: space-between;
-}
-#logIn > div {
-  display: flex;
-  flex-direction: column;
-  height: 60px;
-  justify-content: space-between;
-}
-.paraError {
-  color: red;
-  font-size: 12px;
-  font-weight: 400;
-  width: 178px;
-}
-.paraErrorBig {
-  color: red;
-    font-size: 14px;
-    font-weight: 400;
-    width: 178px;
-    text-align: center;
-}
-.paraLink a {
-  color: #09094c;
-  text-decoration: underline;
-  cursor: grab;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-textarea:focus{
-  outline:0;
-}
-#feed{
-  width: 80%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
-  padding: 20px;
-}
-#divImg{
-  height: 250px;
-  background-image: url(https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
-  background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-#divImg>h2{
-  color: white;
-    font-weight: 800;
-    font-size: 5rem;
-    font-family: 'EB Garamond';
-}
-#divImg>p{
-  color: white;
-  font-size: 1.2rem;
-  font-family: 'EB Garamond';
-  font-style: italic;
-}
-#content{
-  height: 180px;
-  overflow: hidden;
-  cursor: grab;
-  border: 1px solid #efe9e9;
-  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-  padding: 5%;
-  border-radius: 5px;
-}
-#content *{
-  cursor: grab;
-}
-#contentFull{
-  height: auto !important;
-}
-#header{
-  font-family: 'Crimson Text', serif;
+#divLoading {
+  text-align: center;
   font-size: 20px;
-  font-weight: 600;
 }
-#body{
-  font-family: 'EB Garamond', serif;
+#divLoading img {
+  height: 20px;
+  width: 20px;
+  margin: 0 1px;
 }
-#newBlog{
-  height: 250px;
-  background-color: whitesmoke;
-  width: 75%;
+.hidden {
+  visibility: hidden;
+  height: 0 !important;
+  overflow: hidden;
+}
+#newBlog {
+  height: 260px;
+  background-color: white;
+  width: 80%;
   margin: 1% auto;
   display: flex;
-  border-radius: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
-#newBlog>h2{
-  font-family: 'EB Garamond';
+#newBlogHead {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+#newBlog h2 {
+  font-family: "EB Garamond";
   font-size: 30px;
+  margin: 10px 0;
 }
-#formBlog{
+#btnX {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c7b1b1;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  font-weight: 600;
+  cursor: grab;
+}
+#formBlog {
   width: 100%;
   text-align: center;
 }
-#inpTitle{
+#inpTitle {
   height: 30px;
   width: 80%;
   font-size: 20px;
 }
-#inpDescription{
-  height: 100px;
-    width: 80%;
-    font-size: 20px;
-    margin: 1% 0 0 0;
+#inpDescription {
+  height: 90px;
+  width: 80%;
+  margin: 1% 0 0 0;
 }
-#newBlog>button{
+#btnAddNote {
   width: 100px;
   height: 30px;
   border: 0;
@@ -224,24 +144,107 @@ textarea:focus{
   font-weight: 600;
   cursor: grab;
 }
-#btnClose{
-  margin: 2% 0 0 90%;
-    height: 30px;
-    border-radius: 5px;
-    width: 60px;
-    border: 1px solid;
-    background-color: #af2626;
-    color: white;
-    cursor: grab;
+#detailsOuter {
+  background-color: white;
+  margin: 50px auto;
+  width: 70%;
+  padding: 5%;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
-#blogComponent{
-  width: 80%;
-  margin: auto;
+#detailsInner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
 }
-#blogComponent h2{
-  font-size: 50px;
-  margin: 4% 0;
+#weatherDeatils {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: grab;
+  border: 1px solid #00000059;
+  position: relative;
 }
-#blogComponent p{
+#editDeleteDiv {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  width: 42px;
+  justify-content: space-between;
+}
+#editDeleteDiv * {
   font-size: 20px;
+}
+#cityName {
+  font-size: 20px;
+  font-weight: 700;
+  height: 25px;
+  overflow: hidden;
+}
+#weatherDeatils hr {
+  margin: 10px 0;
+}
+#cityText {
+  font-size: 14px;
+  color: #323236e3;
+  height: 100px;
+  overflow: hidden;
+}
+.inpEditTitle{
+  font-size: 1.25rem;
+  padding: 16px 24px;
+}
+.inpEditNote{
+  font-size: 16px;
+  height: 250px;
+  width: 250px;
+  border: 0;
+}
+#footer {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3e4044;
+  justify-content: space-evenly;
+}
+#footerLogoDiv {
+  display: flex;
+  height: 40px;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#footerLogoDiv select {
+  background-color: transparent;
+  color: white;
+  height: 90%;
+  border-radius: 3px;
+}
+#footer ul li {
+  list-style: none;
+  font-size: 10px;
+  color: white;
+}
+#footerLinks {
+  display: flex;
+  width: 65%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px !important;
+}
+.red{
+  border:2px solid red !important;
 }
