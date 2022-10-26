@@ -8,10 +8,11 @@ import BodyPart6 from './BodyPart6';
 import BodyPart7 from './BodyPart7';
 import BodyPart8 from './BodyPart8';
 import BodyPart9 from './BodyPart9';
-
+import NavBar from './NavBar'
 function Body() {
   return (
     <>
+    <NavBar/>
       <BodyPart1/>
       <BodyPart2/>
       <BodyPart3/>

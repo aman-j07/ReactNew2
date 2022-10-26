@@ -392,3 +392,17 @@
   margin-top: 5%;
   justify-content: space-between;
 }
+#suggestionsTable{
+  color: #42474c;
+  width: 60%;
+}
+#suggestionsTable tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+#suggestionsTable tr{
+}
+#suggestionsTable td{
+  padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
