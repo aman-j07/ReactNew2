@@ -4,9 +4,19 @@ import FlipCard from "./FlipCard";
 
 let cards=[false,false,false,false,false,false,false,false,false,false,false,false]
 let memory=[0, 0];
-let memoryClass=["",""]
+let memoryClass=["",""];
+let values=[[1,"charizard.png"],[2,"beckham.jpg"],[3,"pikachu.png"],[4,"nike.jpeg"],[5,"greenlotus.webp"],[6,"CSS3_logo.png"],[7,"cr7logo.jpg"],[8,"HTML5_logo.png"],[9,"React-icon.svg.png"],[10,"waterthrower.webp"],[11,"javascript_logo.png"],[12,"Real_Madrid_CF.png"],[1,"charizard.png"],[2,"beckham.jpg"],[3,"pikachu.png"],[4,"nike.jpeg"],[5,"greenlotus.webp"],[6,"CSS3_logo.png"],[7,"cr7logo.jpg"],[8,"HTML5_logo.png"],[9,"React-icon.svg.png"],[10,"waterthrower.webp"],[11,"javascript_logo.png"],[12,"Real_Madrid_CF.png"]];
 const MemoryGame = () => {
   const [congDiv,setCongDiv]=useState();
+  const [steps,setSteps]=useState(0)
+
+  useState(()=>{
+    for (let i = values.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [values[i], values[j]] = [values[j], values[i]];
+  }
+  },[])
+
   const show = (e) => {
     let ind = e.target.closest(".flip-card").getAttribute("ind");
     if (parseInt(memory[0]) === 0) {
@@ -22,13 +32,17 @@ const MemoryGame = () => {
   };
 
   const checkSimilar=(ind)=>{
+    setSteps((prev) => prev + 1);
     if (parseInt(memory[0]) === parseInt(memory[1])) {
       console.log("matched")
+      for(let i=0;i<memoryClass.length;i++){
+        memoryClass[i].parentNode.classList.add("hide")
+      }
       memory=[0,0]
       memoryClass=["",""]
       cards[parseInt(ind-1)]=true;
       if(cards.every( (val) => val === true )){
-        setCongDiv(<div id="congDiv"><h2>Congratulations !!!</h2><p>You Won</p></div>)
+        setCongDiv(<div id="congDiv"><h2>Congratulations !!!</h2><p>You Won</p><p>You took {steps} steps</p></div>)
       } 
     } else if (parseInt(memory[0]) !== parseInt(memory[1])) {
       console.log("Not matched")
@@ -46,30 +60,9 @@ const MemoryGame = () => {
       <h2>Memory Game</h2>
       {congDiv}
       <div className="container">
-        <FlipCard ind="1"  onclick={show} img="charizard.png" />
-        <FlipCard ind="5"  onclick={show} img="greenlotus.webp" />
-        <FlipCard ind="2"  onclick={show} img="beckham.jpg" />
-        <FlipCard ind="8"  onclick={show} img="HTML5_logo.png" />
-        <FlipCard ind="12" onclick={show} img="Real_Madrid_CF.png" />
-        <FlipCard ind="10" onclick={show} img="waterthrower.webp" />
-        <FlipCard ind="2"  onclick={show} img="beckham.jpg" />
-        <FlipCard ind="3"  onclick={show} img="pikachu.png" />
-        <FlipCard ind="8"  onclick={show} img="HTML5_logo.png" />
-        <FlipCard ind="1"  onclick={show} img="charizard.png" />
-        <FlipCard ind="9"  onclick={show} img="React-icon.svg.png" />
-        <FlipCard ind="11" onclick={show} img="javascript_logo.png" />
-        <FlipCard ind="3"  onclick={show} img="pikachu.png" />
-        <FlipCard ind="7"  onclick={show} img="cr7logo.jpg" />
-        <FlipCard ind="4"  onclick={show} img="nike.jpeg" />
-        <FlipCard ind="5"  onclick={show} img="greenlotus.webp" />
-        <FlipCard ind="12" onclick={show} img="Real_Madrid_CF.png" />
-        <FlipCard ind="10" onclick={show} img="waterthrower.webp" />
-        <FlipCard ind="4"  onclick={show} img="nike.jpeg" />
-        <FlipCard ind="6"  onclick={show} img="CSS3_logo.png" />
-        <FlipCard ind="6"  onclick={show} img="CSS3_logo.png" />
-        <FlipCard ind="7"  onclick={show} img="cr7logo.jpg" />
-        <FlipCard ind="9"  onclick={show} img="React-icon.svg.png" />
-        <FlipCard ind="11" onclick={show} img="javascript_logo.png" />
+        {values.map(item=>{
+          return(<FlipCard ind={item[0]}  onclick={show} img={item[1]} />)
+        })}
       </div>
     </>
   );
