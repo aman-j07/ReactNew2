@@ -5,6 +5,7 @@ const MemoryGame = () => {
   const [memory,setMemory]=useState([0,0])
   const show=(e)=>{
     console.log(e.target.closest(".flip-card-inner").classList.add("show"))
+    console.log(e.target.closest(".flip-card-back").childNodes[0])
   }
   return (
     <>
