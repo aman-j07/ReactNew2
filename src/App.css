@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: #883afb;
-  padding: 1%;
+  padding: 1% 0;
 }
 .App > h2 {
   color: white;
@@ -15,7 +15,7 @@
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 20px;
   width: 60%;
-  margin: 2% auto;
+  margin: 1% auto;
 }
 .flip-card {
   background-color: white;
@@ -40,6 +40,12 @@
   visibility: hidden;
   z-index: -1;
 }
+.hidden{
+  height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 .flip-card-front {
   position: absolute;
   width: 100%;
@@ -56,13 +62,11 @@
   backface-visibility: hidden;
 }
 #congDiv {
-  position: absolute;
-  left: 35%;
-  top: 40%;
-  z-index: 2;
   color: white;
-  background: #000000a8;
-  padding: 2%;
+    background: #000000a8;
+    padding: 2%;
+    display: inline-block;
+    margin: 2%;
 }
 #congDiv h2 {
   font-size: 35px;
