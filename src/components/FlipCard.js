@@ -2,7 +2,7 @@ import React from 'react'
 
 const FlipCard = (props) => {
   return (
-    <div className="flip-card">
+    <div className="flip-card" ind={props.ind}>
         <div className="flip-card-inner">
           <div onClick={props.onclick} className="flip-card-front">
             <img src="cardBack.png" alt="Avatar" style={{ height: "110px", width: "110px" }}/>
