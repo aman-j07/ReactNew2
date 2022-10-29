@@ -4,7 +4,7 @@
 button {
   cursor: grab;
 }
-a{
+a {
   text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ a{
 
 /* Choose Space and Choose Visual Style Pages CSS */
 
-#chooseSpace{
+#chooseSpace {
   min-height: 600px;
 }
 #chooseSpace > h1 {
@@ -139,13 +139,13 @@ a{
 
 /* Logo Place CSS */
 
-#places{
+#places {
   display: flex;
   flex-direction: column;
   width: 65%;
   margin: auto;
 }
-.place{
+.place {
   border: 1px solid #949494;
   padding: 20px;
   margin: 10px 0;
@@ -154,31 +154,30 @@ a{
   align-items: center;
   cursor: grab;
 }
-.place:hover{
+.place:hover {
   transform: scale(1.03);
 }
-.placeName{
+.placeName {
   font-size: 21px;
-    width: 88%;
-    margin-left: 2%;
-    text-align: left;
+  width: 88%;
+  margin-left: 2%;
+  text-align: left;
 }
-.placeCheckIcon{
-
+.placeCheckIcon {
 }
-.iconDiv{
-  display: flex;align-items: center;
+.iconDiv {
+  display: flex;
+  align-items: center;
 }
-.iconDiv svg{
+.iconDiv svg {
   font-size: 32px;
 }
-.clickedPlace{
+.clickedPlace {
   border: 2px solid #5c6ac4 !important;
 }
-.iconPurple{
+.iconPurple {
   color: #5c6ac4;
 }
-
 
 /* Footer CSS */
 #footer {
@@ -202,54 +201,165 @@ a{
 }
 
 /* Choose Logo Page  CSS*/
-#logos{
+#logos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 5% auto;
 }
-.logo{
+.logo {
   min-height: 300px;
-    min-width: 300px;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  min-width: 300px;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.logo:hover #btnEditLogo{
+.logo:hover #btnEditLogo {
   visibility: visible;
 }
-#logo1{
-  background-image: url('../public/logo1.png');
+#logo1 {
+  background-image: url("../public/logo1.png");
 }
-#logo2{
-  background-image: url('../public/logo2.png');
+#logo2 {
+  background-image: url("../public/logo2.png");
 }
-#logo3{
-  background-image: url('../public/logo3.png');
+#logo3 {
+  background-image: url("../public/logo3.png");
 }
-#logo4{
-  background-image: url('../public/logo4.png');
+#logo4 {
+  background-image: url("../public/logo4.png");
 }
-#logo5{
-  background-image: url('../public/logo5.png');
+#logo5 {
+  background-image: url("../public/logo5.png");
 }
-#logo6{
-  background-image: url('../public/logo6.png');
+#logo6 {
+  background-image: url("../public/logo6.png");
 }
-#btnEditLogo{
+#btnEditLogo {
   background: #5c6ac4;
   border: 0;
   color: #fff;
   padding: 20px 32px;
   font-size: 15px;
   border-radius: 4px;
-  width: 70%;
+  width: 210px;
   margin: 0 0 10%;
   visibility: hidden;
   font-weight: 600;
 }
-#btnEditLogo:hover{
+#btnEditLogo:hover {
   background: #313f97;
 }
+
+/* Customize Logo page CSS */
+#customizeLogo {
+  display: flex;
+}
+.customizeForm {
+  margin: 0 !important;
+  padding: 20px !important;
+  box-shadow: 0 20px 40px 0 rgb(33 43 54 / 25%);
+}
+.customizeForm input {
+  width: 85% !important;
+}
+#logoEditingDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -webkit-fill-available;
+}
+.logoEditingDivInner{
+  min-height: 400px;
+  min-width: 400px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.logoName{
+  margin: 0;
+}
+.logoSlogan{
+
+  margin: 0;
+}
+#logo1Edit {
+  background-image: url("../public/logo1.png");
+font-family: 'Teko', sans-serif;
+}
+#logo1Edit .logoName{
+  font-size: 50px;
+  color: #303841;
+}
+#logo1Edit .logoSlogan{
+  font-size: 35px;
+  color: #787d83;
+  margin: 0 0 10%;
+}
+#logo2Edit {
+  background-image: url("../public/logo2.png");
+font-family: 'Heebo', sans-serif;
+}
+#logo2Edit .logoName{
+  font-size: 40px;
+  color: white;
+ }
+#logo2Edit .logoSlogan{
+  font-size: 25px;
+  color: #9c9ea2;
+  margin: 0 0 10%;
+ }
+#logo3Edit {
+  background-image: url("../public/logo3.png");
+  font-family: 'Kaushan Script', cursive;
+}
+#logo3Edit .logoName{
+  font-size: 50px;
+  color: #ba6c65;
+ }
+ #logo3Edit .logoSlogan{
+  font-size: 20px;
+  color: black;
+  margin: 0 0 10%;
+ }
+#logo4Edit {
+  background-image: url("../public/logo4.png");
+  font-family: 'Cutive Mono', monospace;
+}
+#logo4Edit .logoName{
+  font-size: 55px;
+  color: white;
+ }
+ #logo4Edit .logoSlogan{
+  font-size: 25px;
+  color: white;
+  margin: 0 0 20%;
+ }
+#logo5Edit {
+  background-image: url("../public/logo5.png");
+  font-family: 'Cutive Mono', monospace;
+}
+#logo5Edit .logoName{
+  font-size: 55px;
+  color: white;
+ }
+ #logo5Edit .logoSlogan{
+  font-size: 20px;
+  color: white;
+  margin: 0 0 55%;
+ }
+#logo6Edit {
+  background-image: url("../public/logo6.png");
+  font-family: 'Ubuntu Mono', monospace;
+}
+#logo6Edit .logoName{
+  font-size: 40px;
+  font-weight: 600;
+ }
+ #logo6Edit .logoSlogan{
+  font-size: 25px;
+  margin: 3% 0 17%;
+ }

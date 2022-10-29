@@ -1,19 +1,17 @@
-import React, { useEffect, useRef } from 'react'
-import Footer from './Footer'
+import React, { useRef } from 'react'
 import NavBar from './NavBar'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const divs=["logo1","logo2","logo3","logo4","logo5","logo6"]
-const ChooseLogo = () => {
+const ChooseLogo = (props) => {
+  const navigate=useNavigate();
     let refSpaces=useRef();
 
   const clicked=(e)=>{
-    let children=refSpaces.current.childNodes
-    for(let i=0;i<children.length;i++){
-      children[i].classList.remove("clicked");
-    }
-    e.target.closest(".space").classList.add("clicked")
+    let logoImg=e.target.parentNode.getAttribute("id")+"Edit"
+    props.setLogo(logoImg)
+    navigate("/customizeLogo")
   }
 
   return (
@@ -25,9 +23,10 @@ const ChooseLogo = () => {
     <div ref={refSpaces} id="logos">
       {
         divs.map((item,i)=>{
-          return(<div className='logo' id={item} key={i} onClick={clicked}><button id="btnEditLogo">Edit Logo</button></div>)
+          return(<div className='logo' id={item} key={i} ><button id="btnEditLogo" onClick={clicked}>Edit Logo</button></div>)
         })
       }
+
     </div>
     </div>
     </>
