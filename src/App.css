@@ -1,38 +1,93 @@
 .App {
+  background-image: url("../public/signupBackground.jpeg");
+  background-size: 100% 100%;
   text-align: center;
+  padding: 2% 0;
+  color: #202223;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#signUp {
+  margin: auto;
+  box-shadow: 6px 12px 60px rgb(0 0 0 / 20%);
+  border-radius: 8px;
+  background-color: white;
+  max-width: 500px;
+  padding: 40px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  width: 40%;
+}
+#shopifyLogoImg {
+  height: 34px;
+  margin-bottom: 40px;
+}
+#signUp > h1 {
+  font-size: 24px;
+  margin: 0 0 4px;
+}
+#signUp > h3 {
+  font-size: 16px;
+  margin: 0 0 20px;
+  color: #6d7175;
+  font-weight: 400;
+}
+#signUp>label{
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+#signUp>input{
+  padding: 8px 12px;
+  width: -webkit-fill-available;
+}
+#btnContinueEmail{
+  padding: 12px 24px;
+  margin: 15px 0;
+  background-color: #008060;
   color: white;
+  font-weight: 600;
+  font-size: 16px;
+  width: -webkit-fill-available;
+  border: 0;
+  border-radius: 4px;
 }
-
-.App-link {
-  color: #61dafb;
+#paraOr{
+  margin: 8px auto 12px;
+  color: #8C9196;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnContinueSocial{
+  margin: 12px 0 0;
+  padding: 12px 24px;
+  font-size: 16px !important;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #00000063 !important;
+  border-radius: 4px;
+  justify-content: center;
+  color: #202223 !important;
+  box-shadow: none !important;
+}
+#divNewStarted{
+  font-size: 14px;
+  margin: 24px 0 0;
+  display: flex;
+}
+#divNewStarted p{
+  color: #454F4B;
+  margin: 0;
+}
+#divNewStarted a{
+  color: #008060;
+  margin: 0 3px;
+}
+#divFooterLinks{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin: 30px 0 0 20px;
+  width: 100%;
+}
+#divFooterLinks a{
+  color: #637381;
+  margin: 0 2% 0;
 }
