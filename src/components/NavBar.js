@@ -10,7 +10,7 @@ function NavBar() {
   }
   return (
     <nav id="navBar">
-      <Link to="/"><img id="shopifyLogo" src={shopifyLogo} /></Link>
+    <Link to="/"><img id="shopifyLogo" src={shopifyLogo} /></Link>
       <ul id="navLinks">
         <li onClick={showNavChild}>
           Start <KeyboardArrowDownIcon />
