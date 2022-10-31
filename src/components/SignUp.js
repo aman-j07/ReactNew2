@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 
-const clientId = "685977616318-jdr1e14eq6kn20pemil5jj6p7uer4pgj.apps.googleusercontent.com";
+const clientId = "685977616318-hdtil5jrab9ph5bekirbspga1nb95gvj.apps.googleusercontent.com";
 
 const SignUp = () => {
 

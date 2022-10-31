@@ -29,7 +29,7 @@
 #navLinks2 {
   display: flex;
 }
-#navLinks2 a{
+#navLinks2 a {
   text-decoration: none;
   color: white;
 }
@@ -43,7 +43,7 @@
   margin: 0 15px;
   cursor: grab;
 }
-.navChild{
+.navChild {
   position: absolute;
   background-color: white;
   color: #42474c;
@@ -51,41 +51,41 @@
   width: 250px;
   display: none;
 }
-.navGrandChild{
+.navGrandChild {
   position: absolute;
-    background-color: white;
-    width: 250px;
-    right: -250px;
-    top: 0;
-    display: none;
+  background-color: white;
+  width: 250px;
+  right: -250px;
+  top: 0;
+  display: none;
 }
-.navChild ul{
+.navChild ul {
   padding: 5% 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 90%;
 }
-.navChild ul li{
-  padding: 4%!important;
-    cursor: grab;
-    margin: 0 !important;
+.navChild ul li {
+  padding: 4% !important;
+  cursor: grab;
+  margin: 0 !important;
 }
-.navChild ul li:hover{
+.navChild ul li:hover {
   background-color: #f0f1f2;
 }
-.navChild a{
+.navChild a {
   color: #42474c;
   text-decoration: none;
 }
-.navGrandChild ul{
+.navGrandChild ul {
   margin: 3% 0;
   border: 0px solid #00000066;
   border-left-width: 1px;
   padding: 0 !important;
   height: 155px;
 }
-.show{
+.show {
   display: block !important;
 }
 #btnStartTrial {
@@ -192,13 +192,13 @@
   display: flex;
   justify-content: space-between;
 }
-.bodyPart2Contents{
+.bodyPart2Contents {
   width: 30%;
 }
 .bodyPart2Contents h3 {
   font-size: 1.5em;
-    margin-bottom: 0.8333333333em;
-    font-weight: 300;
+  margin-bottom: 0.8333333333em;
+  font-weight: 300;
 }
 .bodyPart2Contents p {
   margin-bottom: 1em;
@@ -207,12 +207,12 @@
 }
 .bodyPart2Contents a {
   color: #008060;
-    padding-right: 1.2em;
-    text-decoration: none;
-    font-weight: 700;
-    line-height: 1.5;
+  padding-right: 1.2em;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.5;
 }
-#bodyPart3{
+#bodyPart3 {
   display: flex;
   width: 80%;
   margin: auto;
@@ -220,199 +220,199 @@
   align-items: center;
   padding: 50px 0;
 }
-.bodyPart3Contents{
+.bodyPart3Contents {
   width: 39%;
 }
-.bodyPart3Contents h3, .bodyPart9Head {
+.bodyPart3Contents h3,
+.bodyPart9Head {
   font-size: 1.875em;
   margin-bottom: 0.6em;
   font-weight: 400;
 }
-.bodyPart3Contents p, .bodyPart9Para {
+.bodyPart3Contents p,
+.bodyPart9Para {
   color: #6b7177;
   margin-bottom: 1em;
-    line-height: 1.5;
-    font-size: 1em;
+  line-height: 1.5;
+  font-size: 1em;
 }
 .bodyPart3Contents a {
   color: #008060;
-    padding-right: 1.2em;
-    text-decoration: none;
-    font-weight: 700;
-    line-height: 1.5;
+  padding-right: 1.2em;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.5;
 }
-.bodyPart3Image{
+.bodyPart3Image {
   background-color: #fff8f6;
   height: 560px;
   border-radius: 20px;
   padding: 40px 80px;
 }
-#bodyPart4{
+#bodyPart4 {
   display: flex;
   height: 476px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 100px ;
+  margin: 100px;
 }
-.bodyPart4Contents{
+.bodyPart4Contents {
   width: 37% !important;
 }
-.bodyPart4Image{
+.bodyPart4Image {
   border-radius: 1.875em;
-    background: #c6f0fc;
-    display: flex;
-    justify-content: center;
-    padding: 3.625em 4.0625em;
+  background: #c6f0fc;
+  display: flex;
+  justify-content: center;
+  padding: 3.625em 4.0625em;
 }
-#bodyPart5{
+#bodyPart5 {
   padding: 96px 0;
   background-color: #f3fcf4;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#bodyPart5 h1{
+#bodyPart5 h1 {
   font-weight: 500;
   font-size: 3.75em;
   line-height: 3.75rem;
   width: 60%;
   text-align: center;
 }
-#bodyPart5 img{
+#bodyPart5 img {
   width: 70%;
 }
-#bodyPart5Content{
+#bodyPart5Content {
   display: flex;
   width: 80%;
   justify-content: space-between;
 }
-.bodyPart5Contents{
-
+.bodyPart5Contents {
 }
-.bodyPart5Contents h3{
+.bodyPart5Contents h3 {
   color: #004c3f;
   font-weight: 700;
   font-size: 4em;
 }
-.bodyPart5Contents p{
+.bodyPart5Contents p {
   font-size: 1.125em;
 }
-#bodyPart6{
+#bodyPart6 {
   height: 480px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.bodyPart6Contents{
+.bodyPart6Contents {
   width: 50%;
 }
-.bodyPart6Contents h2{
+.bodyPart6Contents h2 {
   font-size: 1.5em;
   font-weight: 400;
 }
-.bodyPart6Contents h1{
+.bodyPart6Contents h1 {
   font-size: 2.25em;
   line-height: 3rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
-.bodyPart7{
+.bodyPart7 {
   background-color: #fbfbff;
   margin: 100px 0 !important;
   height: auto !important;
   justify-content: center !important;
 }
-.bodyPart7 h3{
+.bodyPart7 h3 {
   font-size: 48px !important;
 }
-#bodyPart8{
+#bodyPart8 {
   display: flex;
   align-items: center;
   background-color: #fbf7ed;
   justify-content: space-between;
 }
-#bodyPart8 h2{
+#bodyPart8 h2 {
   font-weight: 500;
   font-size: 3em;
   margin: 0 5% 60px 0;
 }
-.bodyPart8Content{
+.bodyPart8Content {
   width: 43%;
   padding: 0 0 0 5%;
 }
-.bodyPart8Content>div{
+.bodyPart8Content > div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
-.headGridItem{
+.headGridItem {
   font-weight: 500;
-    font-size: 1.125em;
-    margin-bottom: 18px;
+  font-size: 1.125em;
+  margin-bottom: 18px;
 }
-.paraGridItem{
+.paraGridItem {
   margin-bottom: 1em;
   font-size: 1em;
   color: #6b7177;
   line-height: 1.5;
   margin-bottom: 18px;
 }
-.linkGridItem{
+.linkGridItem {
   color: #008060;
 }
-#bodyPart9{
+#bodyPart9 {
   text-align: center;
   padding: 96px 0;
 }
-#domain{
+#domain {
   background-color: #faf9f8;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#domain h1{
+#domain h1 {
   font-size: 3em;
   margin: 1.5em;
   width: 45%;
   text-align: center;
 }
-#domain .inpDiv{
+#domain .inpDiv {
   display: flex;
   justify-content: space-between;
   width: 60%;
   margin: 2% 0;
 }
-#domain .inpDiv input{
+#domain .inpDiv input {
   width: 65%;
   border-radius: 4px;
   border: 1px solid;
   padding: 16px;
   font-size: 1em;
 }
-#domain .imgDiv{
+#domain .imgDiv {
   display: flex;
   margin-top: 5%;
   justify-content: space-between;
 }
-#suggestionsTable{
+#suggestionsTable {
   color: #42474c;
   width: 60%;
 }
 #suggestionsTable tr:nth-child(odd) {
   background-color: #dddddd;
 }
-#suggestionsTable tr{
+#suggestionsTable tr {
 }
-#suggestionsTable td{
+#suggestionsTable td {
   padding: 10px;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 /* Login Page CSS */
-#signUpOuter{
+#signUpOuter {
   background-image: url("../public/signupBackground.jpeg");
   background-size: 100% 100%;
   text-align: center;
@@ -446,15 +446,15 @@
   color: #6d7175;
   font-weight: 400;
 }
-#signUp>label{
+#signUp > label {
   margin: 0 0 4px;
   font-size: 14px;
 }
-#signUp>input{
+#signUp > input {
   padding: 8px 12px;
   width: -webkit-fill-available;
 }
-#btnContinueEmail{
+#btnContinueEmail {
   padding: 12px 24px;
   margin: 15px 0;
   background-color: #008060;
@@ -465,11 +465,11 @@
   border: 0;
   border-radius: 4px;
 }
-#paraOr{
+#paraOr {
   margin: 8px auto 12px;
-  color: #8C9196;
+  color: #8c9196;
 }
-.btnContinueSocial{
+.btnContinueSocial {
   margin: 12px 0 0;
   padding: 12px 24px;
   font-size: 16px !important;
@@ -481,31 +481,30 @@
   color: #202223 !important;
   box-shadow: none !important;
 }
-#divNewStarted{
+#divNewStarted {
   font-size: 14px;
   margin: 24px 0 0;
   display: flex;
 }
-#divNewStarted p{
-  color: #454F4B;
+#divNewStarted p {
+  color: #454f4b;
   margin: 0;
 }
-#divNewStarted a{
+#divNewStarted a {
   color: #008060;
   margin: 0 3px;
 }
-#signUpFooterLinks{
+#signUpFooterLinks {
   display: flex;
   justify-content: flex-end;
   font-size: 14px;
   margin: 30px 0 0 20px;
   width: 100%;
 }
-#signUpFooterLinks a{
+#signUpFooterLinks a {
   color: #637381;
   margin: 0 2% 0;
 }
-
 
 /* Themes page CSS */
 #themesNav {
@@ -523,4 +522,220 @@
   margin: 0 30px;
   cursor: grab;
   font-size: 14px;
+}
+#divider {
+  font-size: 25px !important;
+  font-weight: 200;
+  margin: 0 !important;
+}
+.sectionOne {
+  padding: 96px 0;
+  background-color: #054a49;
+  text-align: center;
+}
+.sectionOneHead{
+  width: 625px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 60px;
+  align-items: center;
+}
+.sectionOne h3 {
+  color: #67ccc3;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.sectionOne h1 {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.sectionOne h2 {
+  color: #d6f8f3;
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+.sectionOne p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+#imgThemeDawn{
+  height: 100vh;
+  width: 1178px;
+  box-shadow: 0 5px 40px #002d2d;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+#dawnThemeText{
+  margin: 0 auto 80px;
+  text-align: left;
+  width: 1178px;
+  color: white;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #90dfd6;
+}
+#dawnThemeText >a{
+  text-decoration: underline;
+  font-size: 24px;
+}
+#dawnThemeUnderText{
+  color: #dff7e5;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#dawnThemePara{
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+#dawnThemeLink{
+  font-size: 20px !important;
+  color: #90dfd6;
+  text-decoration: none !important;
+}
+.sectionTwo{
+  background-color: white;
+}
+.sectionTwo h2 {
+  color:black !important;
+}
+.sectionTwoHead{
+  width: 570px;
+}
+#btnExploreThemes{
+  background-color: transparent;
+  font-size: 16px;
+  color: #008060;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #008060;
+  padding: 16px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+#btnExploreThemes:hover{
+  background-color: #008060;
+  color: #ffffff;
+  cursor: grab;
+}
+#imgAtlanticTheme{
+  width: 924px;
+  height: 627px;
+  box-shadow: 0 2px 16px rgb(33 43 54 / 8%), 0 30px 40px rgb(33 43 54 / 20%);
+}
+.sectionThree{
+  padding: 64px 0 120px;
+  text-align: center;
+}
+.sectionThree h2{
+  color: #004c3f;
+  font-size: 30px;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+.sectionThree p{
+  color: #6b7177;
+  margin-bottom: 32px;
+  font-size: 25px;
+}
+
+
+/* Themes HomePage CSS */
+#themesHomePage{
+  background-color: #f8f7f7;
+}
+#themesNavBar{
+  display: flex;
+  height: 80px;
+  color: #42474c;
+  margin: 0 100px;
+  align-items: center;
+}
+#imgThemesLogo{
+  height: 30px;
+  margin-right: 5%;
+}
+#themesNavBar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+#themesNavBar ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  cursor: grab;
+}
+#themesNavBarUlRight{
+  margin-left: 50%;
+}
+#themesHomePageBody{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#themesHomePageBody>div{
+  width: 40%;
+}
+#themesHomePageBody>div h1{
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+#themesHomePageBody>div h3{
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+#btnExploreThemesRound{
+  background-color: black;
+  color: #f8f7f7;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+#btnExploreThemesRound:hover{
+  color: black;
+  background-color: #f8f7f7;
+  cursor: grab;
+  border: 1px solid black;
+}
+#imgAlga{
+  width: 50%;
+}
+
+
+/* Browse Themes Page CSS */
+#browseThemes{
+
+}
+#browseThemesHead{
+  background-color: #fafafa;
+  padding: 48px 0;
+}
+#browseThemesHead h1{
+  font-size: 30px;  
+  margin-left: 100px;
+  font-weight: 500;
+}
+#browseThemesBody{
+  padding: 48px 68px;
+}
+#browseThemesBodyLeft{
+  background-color: #fafafa;
+  border-radius: 4px;
+  padding: 16px;
+  width: 270px;
+}
+.categoryDiv{
+  border-bottom: 1px solid #d2d5d9;
+  margin-bottom: 16px;
+}
+.categoryDivItems{
+  margin-bottom: 15px;
 }
