@@ -9,6 +9,7 @@ import SignUp from './components/SignUp';
 import Themes from './components/Themes';
 import ThemesDetails from './components/ThemesDetails';
 import ThemesHome from './components/ThemesHome';
+import Footer from './components/Footer'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <Route path='/themesDetails' element={<ThemesDetails theme={theme}/>}></Route>
     <Route path='/capital' element={<Capital/>}></Route>
     </Routes>
+    <Footer/>
     </div>
   );
 }

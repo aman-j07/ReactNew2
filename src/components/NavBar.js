@@ -1,56 +1,82 @@
 import React from "react";
 import shopifyLogo from "./images/shopifyLogo.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Link } from "react-router-dom";
 
 function NavBar() {
-  const showNavChild=(e)=>{
-    if(e.target.closest("li").childNodes[2].classList.length===1){
-      e.target.closest("li").childNodes[2].classList.add("show")
+  const showNavChild = (e) => {
+    if (e.target.closest("li").childNodes[2].classList.length === 1) {
+      e.target.closest("li").childNodes[2].classList.add("show");
+    } else {
+      e.target.closest("li").childNodes[2].classList.remove("show");
     }
-    else{
-      e.target.closest("li").childNodes[2].classList.remove("show")
-    }
-  }
+  };
   return (
     <nav id="navBar">
-    <Link to="/"><img id="shopifyLogo" src={shopifyLogo} /></Link>
+      <Link to="/">
+        <img id="shopifyLogo" src={shopifyLogo} />
+      </Link>
       <ul id="navLinks">
         <li onClick={showNavChild}>
           Start <KeyboardArrowDownIcon />
           <div className="navChild">
-            <ul><li>Start your Business</li>
-            <li>Branding</li>
-            <li>
-              Online Presence <ArrowForwardIosIcon/>
-              <div className="navGrandChild">
-              <ul><li style={{    fontSize :"15px", color:"black", textAlign: "center",}}>
-                  Find a domain, explore stock images, and amplify your brand
-                </li>
-               <Link to="/domainPage"> <li>Domain name</li></Link>
-                <li>Stock photography</li>
-                </ul>
-              </div>
-            </li>
-            <li>Store Set Up</li>
+            <ul>
+              <li>Start your Business</li>
+              <li>Branding</li>
+              <li>
+                Online Presence <ArrowForwardIosIcon />
+                <div className="navGrandChild">
+                  <ul>
+                    <li
+                      style={{
+                        fontSize: "15px",
+                        color: "black",
+                        textAlign: "center",
+                      }}
+                    >
+                      Find a domain, explore stock images, and amplify your
+                      brand
+                    </li>
+                    <Link to="/domainPage">
+                      {" "}
+                      <li>Domain name</li>
+                    </Link>
+                    <li>Stock photography</li>
+                  </ul>
+                </div>
+              </li>
+              <li>Store Set Up</li>
             </ul>
           </div>
         </li>
         <li onClick={showNavChild}>
           Sell <KeyboardArrowDownIcon />
           <div className="navChild">
-            <ul><li>Sell everywhere</li>
-              <li>Online store<ArrowForwardIosIcon/>
-              <div className="navGrandChild">
-              <ul><li style={{    fontSize :"15px", color:"black", textAlign: "center",}}>
-              Sell online with an ecommerce website
-                </li>
-                <li>Overview</li>
-                <li>Example</li>
-                <Link to='/themes'><li>Themes</li></Link>
-                </ul>
-              </div></li>
+            <ul>
+              <li>Sell everywhere</li>
+              <li>
+                Online store
+                <ArrowForwardIosIcon />
+                <div className="navGrandChild">
+                  <ul>
+                    <li
+                      style={{
+                        fontSize: "15px",
+                        color: "black",
+                        textAlign: "center",
+                      }}
+                    >
+                      Sell online with an ecommerce website
+                    </li>
+                    <li>Overview</li>
+                    <li>Example</li>
+                    <Link to="/themes">
+                      <li>Themes</li>
+                    </Link>
+                  </ul>
+                </div>
+              </li>
               <li>Point of Sale</li>
               <li>Buy Button</li>
               <li>Checkout</li>
@@ -61,21 +87,32 @@ function NavBar() {
             </ul>
           </div>
         </li>
-        <li>
-          Market
-          <KeyboardArrowDownIcon />
+        <li onClick={showNavChild}>
+          Market<KeyboardArrowDownIcon />
+          <div className="navChild">
+            <ul>
+              <li>Market your business</li>
+              <li>Email marketing</li>
+              <li>Marketing automation</li>
+              <li>Customer groups</li>
+              <li>Business chat</li>
+              <li>Facebook Ads</li>
+            </ul>
+          </div>
         </li>
         <li onClick={showNavChild}>
           Manage <KeyboardArrowDownIcon />
           <div className="navChild">
             <ul>
-            <li>Manage everything</li>
-            <li>Payments</li>
-            <li>Balance</li>
-            <Link to="/capital"><li>Capital</li></Link>
-            <li>Shipping</li>
-            <li>Ecommerce automation</li>
-            <li>Fulfillment</li>
+              <li>Manage everything</li>
+              <li>Payments</li>
+              <li>Balance</li>
+              <Link to="/capital">
+                <li>Capital</li>
+              </Link>
+              <li>Shipping</li>
+              <li>Ecommerce automation</li>
+              <li>Fulfillment</li>
             </ul>
           </div>
         </li>
@@ -86,9 +123,13 @@ function NavBar() {
           Learn
           <KeyboardArrowDownIcon />
         </li>
-        <li><Link to='/signUp'>Login</Link></li>
         <li>
-          <button id="btnStartTrial">Start Free Trial</button>
+          <Link to="/signUp">Login</Link>
+        </li>
+        <li>
+          <Link to="/signUp">
+            <button id="btnStartTrial">Start Free Trial</button>
+          </Link>
         </li>
       </ul>
     </nav>
@@ -96,6 +137,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
-
