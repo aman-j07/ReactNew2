@@ -65,9 +65,19 @@ function NavBar() {
           Market
           <KeyboardArrowDownIcon />
         </li>
-        <li>
-          Manage
-          <KeyboardArrowDownIcon />
+        <li onClick={showNavChild}>
+          Manage <KeyboardArrowDownIcon />
+          <div className="navChild">
+            <ul>
+            <li>Manage everything</li>
+            <li>Payments</li>
+            <li>Balance</li>
+            <Link to="/capital"><li>Capital</li></Link>
+            <li>Shipping</li>
+            <li>Ecommerce automation</li>
+            <li>Fulfillment</li>
+            </ul>
+          </div>
         </li>
       </ul>
       <ul id="navLinks2">
