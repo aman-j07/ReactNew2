@@ -751,6 +751,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
+  cursor: grab;
 }
 .categoryDivItems {
   margin-bottom: 15px;
@@ -771,8 +772,6 @@
 }
 .productDiv img {
   width: 100%;
-}
-.productDetailsDiv {
 }
 .productDetailsNamePrice {
   display: flex;
