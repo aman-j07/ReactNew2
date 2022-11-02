@@ -1,0 +1,100 @@
+#marketPlace {
+  display: flex;
+  justify-content: flex-end;
+}
+#sideNav {
+  width: 27%;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+}
+
+.flexDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+#inpSearchMarketplace{
+    width: 80%;
+    height: 30px;
+    background-color: #0000001a;
+    border: 0;
+    border-radius: 20px;
+    padding: 0 0 0 5%;
+}
+#optionsCategories{
+    padding: 2% 0;
+    height: 400px;
+    overflow-y: scroll;
+    width: 96%
+}
+#optionsCategories::-webkit-scrollbar {
+    width: 8px;
+    display: block;
+  }
+  #optionsCategories:hover #optionsCategories::-webkit-scrollbar {
+    display: block;
+  }
+  #optionsCategories::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  #optionsCategories::-webkit-scrollbar-thumb {
+    background: #ced0d4; 
+    border-radius: 10px;
+  }
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 72%;
+  gap: 4px;
+  padding: 4% 1%;
+  background-color: #f0f2f5;
+}
+#aItem {
+  z-index: 2;
+}
+.item {
+  height: 390px;
+  width: 300px;
+  cursor: grab;
+  overflow: hidden;
+}
+.item p {
+  display: inline;
+}
+.item > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 6px;
+}
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 2%;
+}
+#paraitemPrice {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+#paraitemName {
+  font-size: 15px;
+  margin: 0 0 2px 0;
+}
+#paraitemPlace {
+  color: #65676b;
+  font-size: 13px;
+  margin: 2px 0;
+}
+.circledDiv {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e6eb;
+}
