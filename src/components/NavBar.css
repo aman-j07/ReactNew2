@@ -7,6 +7,17 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
+    min-height: 56px;
+}
+.midNavbar{
+    position: absolute !important;
+    width: 100%;
+    padding: 3px 0 !important;
+    background-color: transparent !important;
+    justify-content: center !important;
+}
+.midNavbar .selected{
+    border-bottom: 5px solid #0882de;
 }
 #navbar ul{
     display: flex;

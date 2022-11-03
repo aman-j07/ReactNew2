@@ -8,7 +8,6 @@
   left: 0;
   height: 100vh;
 }
-
 .flexDiv{
     display: flex;
     justify-content: space-between;
@@ -25,9 +24,13 @@
 }
 #optionsCategories{
     padding: 2% 0;
-    height: 400px;
+    height: 440px;
     overflow-y: scroll;
     width: 96%
+}
+#optionsCategories hr{
+  width: 94%;
+  margin-left: 15px;
 }
 #optionsCategories::-webkit-scrollbar {
     width: 8px;
@@ -43,7 +46,57 @@
     background: #ced0d4; 
     border-radius: 10px;
   }
-
+.circledDiv {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e6eb;
+}
+.optionCategory{
+  display: flex;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 2.5% 2%;
+  align-items: center;
+  width: 92%;
+  margin: 0 0 0 10px;
+  border-radius: 8px;
+}
+.optionCategory:hover{
+  background-color: #f0f2f5;
+  cursor: grab;
+}
+.optionCategorySelected{
+  background-color: #f0f2f5;
+}
+.circledDivSmaller {
+  height: 30px !important;
+  width: 30px !important;
+  margin-right: 10px;
+}
+.circledDiv img{
+  height: 17px;
+  width: 17px;
+}
+.optionCategoryCreate{
+  background-color: #e7f3ff;
+  width: 73% !important;
+  margin: 5px 0 0 16px !important;
+  font-size: 15px;
+  color: #1877f2;
+  font-weight: 500;
+  padding: 3% 0 3% 20%;
+}
+.optionCategoryCreate:hover{
+  background-color: #adcbe9 !important;
+}
+#optionsCategories h3{
+  margin: 15px 0px 0 15px;
+  text-align: left;
+}
 #list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -88,13 +141,4 @@
   color: #65676b;
   font-size: 13px;
   margin: 2px 0;
-}
-.circledDiv {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e4e6eb;
 }

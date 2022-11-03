@@ -232,7 +232,32 @@ const FbMarketplace = () => {
             <div className="flexDiv"><h2>Marketplace</h2><div className='circledDiv'><i className="fa-solid fa-gear"></i></div></div>
             <input id="inpSearchMarketplace" placeholder='Search Marketplace'/>
             <div id="optionsCategories">
-                <div className='optionCategory'></div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-online-store-50.png"/></div>Browse All</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-bell-32.png"/></div>Notifications</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-inbox-64.png"/></div>Inbox</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-price-tag-usd-64.png"/></div>Buying</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-shopping-bag-full-32.png"/></div>Selling</div>
+                <div className='optionCategory optionCategoryCreate'>+ Create new listing</div>
+                <hr/>
+                <h3>Categories</h3>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-carpool-30.png"/></div>Vehicles</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-property-66.png"/></div>Property for rent</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-shopping-bag-full-32.png"/></div>Classifieds</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-t-shirt-24.png"/></div>Clothing</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-smartphone-48.png"/></div>Electronics</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-movie-projector-48.png"/></div>Entertainment</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-favorite-52.png"/></div>Family</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-hammer-48.png"/></div>Gardens and outdoors</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-pencil-drawing-48.png"/></div>Hobbies</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-home-page-48.png"/></div>Home goods</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-open-end-wrench-50.png"/></div>Home improvement tools</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="guitar-instrument.png"/></div>Musical Instruments</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-shopping-bag-full-32.png"/></div>Office supplies</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-cat-footprint-50.png"/></div>Pet supplies</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-property-66.png"/></div>Property for sale</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-exercise-48.png"/></div>Sporting goods</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-game-controller-50.png"/></div>Toys and games</div>
+                <div className='optionCategory'><div className='circledDiv circledDivSmaller'><img src="icons8-people-30.png"/></div>Buy-and-sell groups</div>
             </div>
           </div>
         </div>
