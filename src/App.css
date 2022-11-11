@@ -1,38 +1,170 @@
-.App {
+* {
+  margin: 0;
+}
+#App {
+  min-height: 606px;
+  background-color: #b7b6b2;
+  background-size: 100%;
+}
+#navBar {
+  padding: 0 0 0 3%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  width: 97%;
+  height: 80px;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+#divLogo {
+  display: flex;
+  align-items: center;
+}
+#divLinks {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+}
+#divLinks p {
+  font-family: monospace;
+  font-size: 16px;
+  cursor: grab;
+}
+#divLogo > * {
+  font-size: 30px;
+}
+#navBar pre {
+  font-size: 22px;
+  margin: 0 2px;
+}
+#divLoading {
   text-align: center;
+  font-size: 20px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#divLoading img {
+  height: 20px;
+  width: 20px;
+  margin: 0 1px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#detailsOuter {
+  background-color: white;
+  margin: 50px auto;
+  width: 70%;
+  padding: 5%;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#postDetails {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #00000059;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.postIdDiv{
+  position: absolute;
+  right: -9px;
+  top: -10px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: flex;
+  /* background-color: black; */
+  color: #e7e6e1;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  min-width: 25px;
+  box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+.btnDel{
+color: red;
+cursor: grab;
+}
+#postTitle {
+  font-size: 20px;
+  font-weight: 700;
+  height: 25px;
+  overflow: hidden;
+}
+#postDetails hr {
+  margin: 10px 0;
+}
+#postBody {
+  font-size: 14px;
+  color: #323236e3;
+}
+#formAddPost{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 50%;
+  margin: auto;
+  border: 1px solid #878787;
+  padding: 2%;
+  border-radius: 4px;
+}
+#formAddPost div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 7px 0;
+}
+#btnAdd{
+  padding: 4px 20px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 800;
+}
+#footer {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3e4044;
+  justify-content: space-evenly;
+}
+#footerLogoDiv {
+  display: flex;
+  height: 40px;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#footerLogoDiv select {
+  background-color: transparent;
+  color: white;
+  height: 90%;
+  border-radius: 3px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#footer ul li {
+  list-style: none;
+  font-size: 10px;
+  color: white;
+}
+#footerLinks {
+  display: flex;
+  width: 65%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#footerLogo {
+  font-family: "Satisfy", cursive;
+  font-size: 30px !important;
+}
+.red{
+  border:2px solid red !important;
 }
