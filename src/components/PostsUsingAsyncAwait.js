@@ -1,38 +1,36 @@
-import NoteIcon from "@mui/icons-material/Note";
+import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const Library = () => {
+const PostsUsingAsyncAwait = () => {
   const [partPosts, setPartPosts] = useState([]);
 
-  const fetchPost = async fetchPost => {
-    await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-      .then((res) => res.json())
-      .then((data) => {
-        setPartPosts([...data]);
-        document.getElementById("divLoading").hidden = true;
-      });
+  async function fetchPost(){
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=5`);
+    const data = await res.json();
+    setPartPosts(data);
+    document.getElementById("divLoading").hidden = true;
   };
 
-  const addPost = (event) => {
+  async function addPost(event){
     event.preventDefault();
-    const data = new FormData(event.target);
-    const formData = Object.assign(...Array.from(data, ([name, value]) => ({[name]: value})));  //to make an object from the form input values 
-     fetch('https://jsonplaceholder.typicode.com/posts', {
+    const Fdata = new FormData(event.target);
+    const formData = Object.assign(...Array.from(Fdata, ([name, value]) => ({[name]: value})));  //to make an object from the form input values 
+     const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       headers: {'Content-type': 'application/json; charset=UTF-8',},
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+    const data=await res.json();
+    console.log(data)
   };
 
-  const deletePost = (i) => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${i}`, {
+  async function deletePost(i){
+    const res=await fetch(`https://jsonplaceholder.typicode.com/posts/${i}`, {
       method: "DELETE",
     })
-      .then((res) => res.json())
-      .then(console.log);
+    const data =await res.json()
+    console.log(data)
   };
 
   useEffect(() => {
@@ -42,8 +40,7 @@ const Library = () => {
   return (
     <>
       <div id="navBar">
-        <div id="divLogo">
-          <NoteIcon /> <pre>Posts</pre>
+        <div id="divLogo"> <pre>Posts</pre>
         </div>
       </div>
       <div id="detailsOuter">
@@ -75,4 +72,4 @@ const Library = () => {
   );
 };
 
-export default Library;
+export default PostsUsingAsyncAwait;
