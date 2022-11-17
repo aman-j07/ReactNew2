@@ -1,38 +1,62 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+div #parent{
+  border: 1px solid #a99b9b;
+  width: 500px;
+  padding: 10px;
+  margin: 30px auto;
+  border-radius: 4px;
+  background-color: whitesmoke;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div #parent>h3{
+  margin-top: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div #divAllAny{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px 0 0 40px;
+}
+div #divAllAny>div{
+  display: flex;
+  margin: 0 5px;
+}
+div #divAllAny>div>input{
+  margin: 0 3px;
+}
+div #divAllAny>*{
+  font-size: 14px;
+}
+div #divConditions{
+  margin: 20px 40px;
+}
+div .divCondition{
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
+}
+div #parent button{
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  font-weight: 600;
+  cursor: grab;
+  border: 1px solid transparent;
+}
+.btnDelete{
   color: white;
+  background-color: #bd1717;
 }
-
-.App-link {
-  color: #61dafb;
+.btnDelete:hover{
+  background-color: white;
+  border: 1px solid #bd1717 !important;
+  color: #bd1717;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#btnAdd{
+  color: white;
+  background-color: #0863d3;
+}
+#btnAdd:hover{
+  background-color: white;
+  border: 1px solid #0863d3;
+  color: #0863d3;
 }
