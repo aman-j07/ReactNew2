@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Child(props) {
   return (
     <div>
-        <p>{props.bool?"true":"false"}</p>
+      Child
     </div>
   )
 }
